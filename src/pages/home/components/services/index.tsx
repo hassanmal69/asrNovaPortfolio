@@ -4,7 +4,6 @@ import { useRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Image from '../../../../assets/laalanti.jpg'
 import Firefly from '../bgfirefly'
-// import BallMoving from './ballMoving'
 
 const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null)
