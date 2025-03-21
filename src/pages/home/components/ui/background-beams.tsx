@@ -69,7 +69,7 @@ export const BackgroundBeams = ({
     <div
       ref={parentRef}
       className={cn(
-        "h-96 md:h-[40rem] bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden",
+        "h-96 md:h-[40rem] relative flex items-center w-full justify-center overflow-hidden",
         // h-screen if you want bigger
         className
       )}
@@ -232,6 +232,7 @@ const Explosion = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
   }));
 
   return (
+    <>
     <div {...props} className={cn("absolute z-50 h-2 w-2", props.className)}>
       <motion.div
         initial={{ opacity: 0 }}
@@ -254,5 +255,6 @@ const Explosion = ({ ...props }: React.HTMLProps<HTMLDivElement>) => {
         />
       ))}
     </div>
+    </>
   );
 };
