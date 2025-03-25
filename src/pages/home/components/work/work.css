@@ -1,0 +1,13 @@
+.projects-wrapper {
+  width: 60%;
+  padding: 30px;
+}
+.projects-wrapper a {
+  margin-top: 10px;
+}
+.textContentinwork {
+  padding: 20px 0;
+}
+.textContentinwork h3 {
+  width: 40%;
+}
