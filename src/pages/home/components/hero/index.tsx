@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import './styles.css';
 import SwingingRobot from './swingingRobot';
 import ParallaxEffect from './textMoving';
+import { ButtoninBookaCall } from '../buttonForHero';
 const Hero = () => {
   return (
     <section className="heroPageMainSection h-dvh flex flex-col overflow-hidden w-full m-auto gap-10 !pb-10">
@@ -34,14 +35,9 @@ const Hero = () => {
               create digital experiences that make your brand impossible to
               ignore.
             </motion.p>
-            <div className="buttonDivinHero flex justify-[left] mx-0 my-0">
-              <motion.button className="buttoninHero inter">
-                Get in Touch
-              </motion.button>
-            </div>
+            <ButtoninBookaCall text="Get in touch"/>
           </motion.div>
 
-          {/* Swinging Robot Animation */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -59,11 +55,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-// let hero = {
-//   title: 'Website Fade, Stories Last Forever',
-//   subtitle:
-//     'Your business is more than just a service—it’s a story waiting to be told. At Asrnova, we create digital experiences that make your software impossible to ignore.',
-//   cta: 'Get Started',
-// };
-//greencolo #071215 white #D7DBD9 green+white #84ABA6 

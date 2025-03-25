@@ -30,7 +30,7 @@ const Services = () => {
   return (
     <motion.div
       ref={containerRef}
-      className='mainSectionService flex flex-col items-center  bg-black w-full  !py-40'>
+      className='mainSectionService flex flex-col items-center  bg-black w-full  !py-10'>
       <motion.div
         className='circleinbg relative bg-gradient-to-r from-[#5454D4] to-[#8C8CFF]'
         style={{ y: yPosforBg, opacity: bgOpacity }}
