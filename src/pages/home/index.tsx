@@ -7,8 +7,8 @@ const Home = () => {
     <section className="flex flex-col gap-12 ">
       <Hero />
       <Services />
-      <BookaCall/>
       <WorkComponent/>
+      <BookaCall/>
     </section>
   )
 }
