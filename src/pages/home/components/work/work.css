@@ -1,3 +1,10 @@
+.mainSectionMainWork{
+  background-image: url(../../../../assets/galaxyoIC.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: saturate(0.4);
+  background-repeat: no-repeat;
+}
 .projects-wrapper {
   width: 60%;
   padding: 30px;
@@ -8,6 +15,26 @@
 .textContentinwork {
   padding: 20px 0;
 }
+.imageinworkContainerAstranout{
+  transform: rotate(160deg);
+}
 .textContentinwork h3 {
   width: 40%;
+}
+.cardInworkComponent{
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 38px;  
+  text-align: left !important;
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+}
+.point-left {
+  transform: scaleX(-1) !important; /* Flip horizontally to point left */
+}
+
+.point-right {
+  transform: scaleX(1) !important; /* Normal direction (pointing right) */
 }
