@@ -38,3 +38,13 @@
 .point-right {
   transform: scaleX(1) !important; /* Normal direction (pointing right) */
 }
+.customCursor {
+  position: fixed; /* Ensures it stays in place relative to the viewport */
+  width: 100px;
+  height: 100px;
+  pointer-events: none; /* Prevents it from interfering with mouse events */
+  transform: translate(-50%, -50%); /* Centers the cursor */
+  transition: transform 0.1s linear; /* Smooth movement */
+  z-index: 1000;
+}
+
