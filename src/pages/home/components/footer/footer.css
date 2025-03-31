@@ -1,0 +1,9 @@
+.footerMaincomponent{
+    background: rgb(0,44,255);
+background: radial-gradient(circle, rgba(0,44,255,0.7091211484593838) 30%, rgba(0,0,0,1) 60%);
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+40,002cff+70&1+40,0.71+70 */
+background: linear-gradient(to bottom,  rgba(0,0,0,1) 40%,rgba(0,44,255,0.71) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+40,000f5c+70&1+40,0.71+70 */
+background: linear-gradient(to bottom,  rgba(0,0,0,1) 40%,rgba(0,15,92,0.71) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
