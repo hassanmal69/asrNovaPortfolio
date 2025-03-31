@@ -88,9 +88,6 @@
     transform-style: preserve-3d !important;
 }
 
-/* .imageMainContainer{
-    transform: rotateX(6deg) translateZ(40px);
-  } */
 .circleinbg {
     height: 500px;
     width: 700px;

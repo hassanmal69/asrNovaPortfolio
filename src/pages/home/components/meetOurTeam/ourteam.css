@@ -1,0 +1,32 @@
+/* .BackGroundMeetourteam {
+    background: url(../../../../assets/another.jpg);
+    background-size: cover;
+    height: 100%;
+} */
+/* HTML: <div class="wavy-line"></div> */
+.wavy-line {
+    --a: 90deg; /* control the angle */
+    --s: 100px; /* size of the zig-zag */
+    --b: 35px;  /* control the thickness */
+    
+    background: #000000;
+    width: calc(var(--b) + var(--s)/(2*tan(var(--a)/2)));
+    min-height: 250px;
+    --_g:100% var(--s) repeat-y conic-gradient(from calc(90deg - var(--a)/2) at left,
+      #0000,#000 1deg calc(var(--a) - 1deg),#0000 var(--a));
+    mask: var(--b) 50%/var(--_g) exclude,0 50%/var(--_g);
+}
+.meetOurTeamCard{
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(17, 25, 40, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 15px;  
+  text-align: left !important;
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+}
+.BluecircleinBG{
+  filter: blur(100px);
+  background-color: rgb(130, 94, 247);
+}
