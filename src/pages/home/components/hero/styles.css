@@ -45,9 +45,3 @@
 .buttonDivinHero:active::before {
   filter: blur(0.2em);
 }
-.heroPageMainSection{
- background-image: url(../../../../assets/magicpattern-87PP9Zd7MNo-unsplash.jpg);
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;
-}

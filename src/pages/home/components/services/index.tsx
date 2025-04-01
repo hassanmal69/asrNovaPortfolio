@@ -56,7 +56,7 @@ const Services = () => {
           rotateX: rotateX,
           translateZ: "40px",
           y: rotateY,
-          opacity: visible
+          opacity: visible,
         }}>
 
         <img className='w-full h-full relative rounded-3xl imginservice' src={Image} />

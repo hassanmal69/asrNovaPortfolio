@@ -3,9 +3,9 @@ import BgMeetTeam from './bgMeetTeam';
 import Hassan from '../../../../assets/hassanNFT.webp';
 import Moiz from '../../../../assets/moizNft.webp';
 import Point from '../../../../assets/monkeypointin.webp';
-import CatPoint from '../../../../assets/catpoint.png'
 import Broken from '../../../../assets/12122.webp';
 import { useState } from 'react';
+// import { useMotionTemplate, useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
 
 const teamMembers = [
     {
@@ -26,7 +26,6 @@ const teamMembers = [
 
 const MeetourTeam = () => {
     const [hover, setHover] = useState(null);
-
     return (
         <motion.section className='relative h-[120vh] w-full'>
             <div className="h-full w-full absolute">
@@ -67,7 +66,7 @@ const MeetourTeam = () => {
                         <div className="relative">
                             <div className="absolute w-full h-full flex justify-center items-center z-50 pointer-events-none overflow-hidden">
                                 <motion.h4
-                                    className='text-3xl text-gray-300 font-extrabold flex whitespace-nowrap w-full'
+                                    className='text-4xl text-white font-extrabold flex whitespace-nowrap w-full'
                                     animate={{ x: ["-136%", "10%"] }}
                                     transition={{
                                         duration: 5,
