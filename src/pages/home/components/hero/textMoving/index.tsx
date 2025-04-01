@@ -59,7 +59,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
           <motion.span
             key={index}
             style={{ opacity }} // Apply fading effect
-            className="text-4xl font-extrabold bg-gradient-to-r from-[#5454D4] to-[#8C8CFF] bg-clip-text text-transparent"
+            className="azonix text-4xl font-extrabold text-[#00A3FF]"
           >
             {children}
           </motion.span>
@@ -68,7 +68,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     </div>
   );
 }
-
+// bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent
 export default function ParallaxEffect() {
   return (
     <section>

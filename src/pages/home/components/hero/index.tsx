@@ -16,7 +16,7 @@ const Hero = () => {
             transition={{ duration: 1, ease: 'easeOut' }}
           >
             <motion.h1
-              className="text-6xl font-bold bg-gradient-to-r from-[#5454D4] to-[#8C8CFF] bg-clip-text text-transparent leading-tight"
+              className="ethnocentric text-4xl font-bold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight "
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
@@ -24,14 +24,14 @@ const Hero = () => {
               Websites Fade, <br /> Stories Last Forever
             </motion.h1>
             <motion.p
-              className="text-lg text-[#000000] leading-relaxed w-[50%]"
+              className="orbitron text-xl text-[#000000] leading-relaxed w-[80%]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
               Your business is more than just a service – it’s a story waiting
               to be told. At{' '}
-              <span className="font-semibold text-white">Asrnova</span>, we
+              <span className="font-semibold text-[#00A3FF]">Asrnova</span>, we
               create digital experiences that make your brand impossible to
               ignore.
             </motion.p>
@@ -47,7 +47,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-      <div className="movingText w-[80%]">
+      <div className="movingText w-[100%]">
         <ParallaxEffect />
       </div>
     </section>
