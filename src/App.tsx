@@ -3,7 +3,7 @@ import Home from './pages/home'
 function App() {
 
   return (
-    <section className=" bg-[#000000]  text-white">
+    <section className="">
       <Home />
     </section>
   )

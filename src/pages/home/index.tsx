@@ -4,16 +4,26 @@ import WorkComponent from "./components/work"
 import BookaCall from "./components/bookaCall"
 import Footer from "./components/footer"
 import MeetourTeam from "./components/meetOurTeam"
+import { Navbar } from './components/navBar'
+import pic from '../../assets/magicpattern-87PP9Zd7MNo-unsplash.jpg'
 const Home = () => {
   return (
-    <section className="flex flex-col gap-12 ">
+    <section
+      style={{
+        backgroundImage: `url(${pic})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: " contain"
+      }}>
+      <Navbar />
       <Hero />
-      <Services />
-      <WorkComponent/>
-      <MeetourTeam/>
-      <BookaCall/>
-      <Footer/>
-    </section>
+      <div className="flex flex-col gap-12 bg-[#000000]  text-white">
+        <Services />
+        <WorkComponent />
+        <MeetourTeam />
+        <BookaCall />
+        <Footer />
+      </div>
+    </section >
   )
 }
 
