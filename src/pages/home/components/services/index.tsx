@@ -4,7 +4,10 @@ import { useRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Image from '../../../../assets/laalanti.jpg'
 import Firefly from '../bgfirefly'
-
+import spaceBg from '../../../../assets/soacebw.jpg'
+import monkey from '../../../../assets/monkeyshowing.png'
+import MoonComponent from '../work/animatedmoon'
+import { CardDemo } from './cardinservice'
 const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: containerRef })
@@ -24,7 +27,14 @@ const Services = () => {
   const finalBlur = useMotionTemplate`blur(${textBlur}px)`
   const yPosforBg = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5, 0.7], [0, 100, 500, 700, 900])
   const bgOpacity = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5], [1, 0.9, 0.7, 0.5])
-  // Detect when text is in view
+  const serviceWidth = useTransform(scrollYProgress, [0.5, 0.8, 0.9], [80, 90, 100])
+  const finalWidth = useMotionTemplate`${serviceWidth}%`
+  const finalMonkeyShowingOpacity = useTransform(scrollYProgress, [0.5, 0.7, 0.9], [1, 0.7, 0])
+  const MonkeyShowingWidth = useTransform(scrollYProgress, [0.5, 0.7, 0.9], [30, 25, 0])
+  const finalMonkeyShowingWidth = useMotionTemplate`${MonkeyShowingWidth}%`
+  const cardComponentOpacity = useTransform(scrollYProgress, [0.6, 0.7, 0.9, 1], [0, 0, 1, 1])
+  const cardComponentDisplay = useTransform(scrollYProgress, [0.6, 0.7, 0.9, 1], ["none", "none", "block", "block"])
+
   const { ref: textRef, inView } = useInView({ triggerOnce: false, threshold: 0.2 })
 
   return (
@@ -87,30 +97,53 @@ const Services = () => {
 
       <motion.div
         style={{ opacity: cardsVisible }}
-        className="serviceSimplecard relative !h-[800px] gap-8 flex justify-center items-center flex-col w-full ">
-          
-        <motion.div className='absolute z-10 h-full w-full pointer-events-none'>
-         <div className="blackscreen w-full h-full absolute z-10 pointer-events-none"></div>
-          <Firefly/>
-        </motion.div>
-        <motion.div className="flex flex-wrap gap-10 justify-center w-full z-10 relative">
-          {servicesContent.services.map((service, index) => (
-            <div className="parent" key={index}>
-              <div className="card">
-                <div className="content-box">
-                  <div className="head">{service.title}</div>
-                  <div className="content">
-                    {service.description}
-                    
-                  </div>
-                </div>
+        className="serviceSimplecard relative gap-8 flex justify-center items-center flex-col w-full ">
+        <motion.div className="flex w-full">
+          <motion.img
+            src={monkey}
+            style={{
+              maxHeight: "min-content",
+              width: finalMonkeyShowingWidth,
+              opacity: finalMonkeyShowingOpacity
+            }}
+            alt="Pointing Hand"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: [0, -15, 0] }}
+            transition={{ duration: 0.5, repeat: Infinity, repeatType: "mirror" }}
+          />
+          <motion.div
+            style={{
+              width: finalWidth,
+            }} className=" m-auto flex-col gap-20 border-2 flex justify-center items-center rounded-3xl border-amber-50">
+            <motion.div
+              style={{
+                backgroundImage: `url(${spaceBg})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover"
+              }} className="!h-[70vh] rounded-3xl !m-auto w-full flex justify-center items-center">
+              <div className="absolute z-100 h-[400px] w-[550px] top-1/2 left-1/10 brightness-[0.5]">
+                <MoonComponent />
               </div>
-            </div>
-          ))}
+              <h1 className='z-400'>Our Services</h1>
+            </motion.div>
+            <motion.div
+              style={{
+                opacity: cardComponentOpacity
+              }}>
+              <motion.div className="h-[120vh] flex flex-wrap gap-30 justify-center w-full z-10 relative">
+                {servicesContent.services.map((service, index) => (
+                  <CardDemo
+                    title={service.title}
+                    key={index}
+                    description={service.description} />
+                ))}
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </motion.div>
         <div className="relative z-30">
-      <p className='text-amber-50'>{servicesContent.closing}</p>
-      </div>
+          <p className='text-amber-50'>{servicesContent.closing}</p>
+        </div>
       </motion.div>
 
     </motion.div>

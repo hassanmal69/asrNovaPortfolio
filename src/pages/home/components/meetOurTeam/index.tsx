@@ -4,6 +4,7 @@ import Hassan from "../../../../assets/hassanNFT.webp";
 import Moiz from "../../../../assets/moizNft.webp";
 import Point from "../../../../assets/monkeypointin.webp";
 import Broken from "../../../../assets/12122.webp";
+import catPoint from '../../../../assets/catpoint.png'
 import { useState } from "react";
 
 const teamMembers = [
@@ -21,7 +22,7 @@ const teamMembers = [
     description:
       "Hassan Tahir is the driving force behind our technology, turning ideas into reality. As CTO, he ensures our products are innovative and cutting-edge.",
     image: Hassan,
-    hoverImage: Point,
+    hoverImage: catPoint,
   },
 ];
 
