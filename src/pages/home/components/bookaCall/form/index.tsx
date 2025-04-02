@@ -1,39 +1,55 @@
 import { useState } from "react";
-// import { motion } from 'framer-motion';
 import { ButtoninBookaCall } from "../../buttonForHero";
-import '../BookaCall.css'
+import '../BookaCall.css';
+
+interface FormFields {
+    agencyName: string;
+    email: string;
+    phoneNumber: string;
+    region: string;
+    date: string;
+    time: string;
+    projectDetails: string;
+}
+
 const FormBookacall = () => {
-    const formFields = [
+    const formFields: { name: keyof FormFields; type: string; placeholder: string }[] = [
         { name: "agencyName", type: "text", placeholder: "Enter agency name" },
         { name: "email", type: "email", placeholder: "Enter your email" },
         { name: "phoneNumber", type: "text", placeholder: "Enter your phone number" },
-        { name: "date", type: "date", placeholder: "daate daal de" },
-        { name: "time", type: "time", placeholder: "time enter kr" },
-        { name: "message", type: "text", placeholder: "Enter your message" },
+        { name: "region", type: "select", placeholder: "Select your region" },
+        { name: "date", type: "date", placeholder: "Select a date" },
+        { name: "time", type: "time", placeholder: "Select a time" },
+        { name: "projectDetails", type: "textarea", placeholder: "Your project details..." },
     ];
-    const today = new Date().toISOString().split("T")[0];
-    const [inputValue, setinputValue] = useState({
+    
+    const regions: string[] = ["North America", "Europe", "Asia", "Australia", "Africa", "South America"];
+    
+    const today: string = new Date().toISOString().split("T")[0];
+    const [inputValue, setInputValue] = useState<FormFields>({
         agencyName: "",
         email: "",
         phoneNumber: "",
+        region: "",
         date: "",
         time: "",
-        message: ""
-    })
-    const changingValuesInInput = (e) => {
-        const { name, value } = e.target
-        setinputValue((prevData) => ({
+        projectDetails: ""
+    });
+
+    const changingValuesInInput = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setInputValue((prevData) => ({
             ...prevData,
             [name]: value
         }));
-    }
-    const handleSubmit = async (e) => {
+    };
+
+    const handleSubmit = async (e: React.MouseEvent<HTMLDivElement>) => {
         e.preventDefault();
 
-        const { agencyName, date, email, message, phoneNumber, time } = inputValue;
+        const { agencyName, date, email, projectDetails, phoneNumber, time, region } = inputValue;
 
-        // Check if any field is empty
-        if (!agencyName || !date || !email || !message || !phoneNumber || !time) {
+        if (!agencyName || !date || !email || !projectDetails || !phoneNumber || !time || !region) {
             alert("Enter complete data first");
             return;
         }
@@ -51,24 +67,52 @@ const FormBookacall = () => {
                 alert("Failed to send data.");
             }
         } catch (error) {
-            alert("can't connect to server try again kindly!")
+            alert("Can't connect to server, try again kindly!");
         }
-    }
+    };
+
     return (
         <section className="flex flex-col gap-10">
-            <form method="post" className="flex flex-wrap w-2/3 gap-10">
+            <form method="post" className="flex flex-wrap field-wrapper">
                 {formFields.map((field, index) => (
-                    <input
-                        key={index}
-                        type={field.type}
-                        name={field.name}
-                        required
-                        value={inputValue[field.name]}
-                        onChange={changingValuesInInput}
-                        placeholder={field.placeholder}
-                        className="w-1/3 border-0 !border-b-2 bg-transparent outline-0 text-gray-100 border-gray-500"
-                        {...(field.type === "date" ? { min: today } : {})}
-                    />
+                    field.type === "textarea" ? (
+                        <textarea
+                            key={index}
+                            name={field.name}
+                            rows={4}
+                            required
+                            value={inputValue[field.name]}
+                            onChange={changingValuesInInput}
+                            placeholder={field.placeholder}
+                            className="border-0 !border-b-2 bg-transparent outline-0 text-gray-100 border-gray-500 fields"
+                        />
+                    ) : field.type === "select" ? (
+                        <select
+                            key={index}
+                            name={field.name}
+                            required
+                            value={inputValue[field.name]}
+                            onChange={changingValuesInInput}
+                            className="border-0 !border-b-2 bg-transparent outline-0 text-gray-100 border-gray-500 fields"
+                        >
+                            <option value="" disabled>Select your region</option>
+                            {regions.map((region, idx) => (
+                                <option key={idx} value={region}>{region}</option>
+                            ))}
+                        </select>
+                    ) : (
+                        <input
+                            key={index}
+                            type={field.type}
+                            name={field.name}
+                            required
+                            value={inputValue[field.name]}
+                            onChange={changingValuesInInput}
+                            placeholder={field.placeholder}
+                            className="border-0 !border-b-2 bg-transparent outline-0 text-gray-100 border-gray-500 fields"
+                            {...(field.type === "date" ? { min: today } : {})}
+                        />
+                    )
                 ))}
             </form>
             <div onClick={handleSubmit}>

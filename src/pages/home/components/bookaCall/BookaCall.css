@@ -1,11 +1,23 @@
 .headingBookacall {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(201, 201, 201, 1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(201, 201, 201, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-    opacity: 1;
+  filter: invert(1);
+  opacity: 1;
+}
+.field-wrapper {
+  width: 80%;
+  gap: 40px 20px;
+  padding: 20px;
+}
+.fields {
+  width: 45%;
 }
