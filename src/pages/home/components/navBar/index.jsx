@@ -1,6 +1,14 @@
-import { Menu, X, Phone, Settings, Briefcase, MessageSquare } from "lucide-react";
+import {
+  Menu,
+  X,
+  Phone,
+  Settings,
+  Briefcase,
+  MessageSquare,
+} from "lucide-react";
+// import "./nav.css";
 import { useState } from "react";
-
+import Logo from "@assets/logo.png";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -18,11 +26,7 @@ export const Navbar = () => {
           isOpen ? "rounded-2xl" : "rounded-full"
         } transition-all duration-300`}
       >
-        {/* Dummy Logo */}
-        <div className="flex items-center justify-center w-[100px] h-10 text-white bg-indigo-500 rounded-full">
-          <span className="font-bold">ASR NOVA</span>
-        </div>
-
+        <img className="w-[150px]" src={Logo} alt="ASRNOVA" />
         {/* Desktop Navigation */}
         <div className=" flex justify-between w-[50%]  md:flex items-center space-x-6">
           {navItems.map((item) => (
