@@ -1,20 +1,28 @@
 
 import './service.css'
 import { motion, useMotionTemplate, useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Image from '../../../../assets/laalanti.jpg'
 import { ParallaxScrollSecondDemo } from './cardsShowingParallax'
 const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: containerRef })
+  const [isMobile, setisMobile] = useState(window.innerWidth < 660)
+  useEffect(() => {
+    const handleResize = () => setisMobile(window.innerWidth < 660)
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [])
 
   useMotionValueEvent(scrollYProgress, "change", (value) => {
     console.log(value)
   })
 
   const rotateX = useTransform(scrollYProgress, [0, 0.1], [6, 0])
-  const rotateY = useTransform(scrollYProgress, [0, 0.1, 0.3], [0, 100, 500])
+  const rotateYInput = isMobile ? [0, 0.05, 0.2] : [0, 0.1, 0.3];
+
+  const rotateY = useTransform(scrollYProgress, rotateYInput, [0, 100, 500])
   const visible = useTransform(scrollYProgress, [0, 0.1, 0.3], [1, 0.5, 0])
   const textOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0.8])
   const textScale = useTransform(scrollYProgress, [0, 0.1], [1, 0.7])
@@ -22,7 +30,7 @@ const Services = () => {
   const textUp = useTransform(scrollYProgress, [0, 0.1], [0, 20])
   const finalBlur = useMotionTemplate`blur(${textBlur}px)`
   const yPosforBg = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5, 0.7], [0, 100, 500, 700, 900])
-  const bgOpacity = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5], [1, 0.9, 0.7, 0.5]);  const { ref: textRef, inView } = useInView({ triggerOnce: false, threshold: 0.2 })
+  const bgOpacity = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5], [1, 0.9, 0.7, 0.5]); const { ref: textRef, inView } = useInView({ triggerOnce: false, threshold: 0.2 })
 
   return (
     <motion.div
@@ -40,18 +48,18 @@ const Services = () => {
         }}
       >
       </motion.div>
-      <motion.h1 className='text-8xl font-bold text-center'
+      <motion.h1 className='text-6xl sm:text-8xl font-bold text-center'
         style={{
           opacity: textOpacity,
           scale: textScale,
           filter: finalBlur,
           y: textUp
-        }}>Our Services</motion.h1>
+        }}>Our Vision</motion.h1>
 
-      <motion.div className="imageMainContainer relative flex justify-center items-center shadow-2xl rounded-3xl !-mt-2 w-[70%] h-[700px] border-4"
+      <motion.div className="imageMainContainer translate-z-[20px] sm:translate-z-[40px] relative flex justify-center items-center shadow-2xl rounded-3xl !-mt-2 w-[85%] h-[350px] sm:w-[70%] sm:h-[700px] border-4"
         style={{
           rotateX: rotateX,
-          translateZ: "40px",
+          // translateZ: "40px",
           y: rotateY,
           opacity: visible,
         }}>
@@ -60,14 +68,14 @@ const Services = () => {
 
         <motion.p
           ref={textRef}
-          className="absolute text-white px-4 py-2 flex gap-2 w-[50%] bg-opacity-50 rounded-md flex-wrap">
+          className="absolute text-white px-4 py-2 flex gap-2 w-[90%] sm:w-[50%] bg-opacity-50 rounded-md flex-wrap">
           {servicesContent.intro.split(" ").map((word, index) => {
             const delay = index * 0.05; // Stagger effect
 
             return (
               <motion.span
                 key={index}
-                className="inline-block text-2xl font-extrabold "
+                className="inline-block text-sm sm:text-2xl font-extrabold "
                 style={{ display: "inline-block", whiteSpace: "nowrap" }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Trigger only when in view
@@ -80,10 +88,10 @@ const Services = () => {
         </motion.p>
 
       </motion.div>
-      <ParallaxScrollSecondDemo containerRefrence={containerRef}/>
+      <ParallaxScrollSecondDemo containerRefrence={containerRef} />
       <div className="relative z-30">
-          <p className='text-amber-50'>{servicesContent.closing}</p>
-        </div>
+        <p className='text-amber-50'>{servicesContent.closing}</p>
+      </div>
     </motion.div>
   )
 }
