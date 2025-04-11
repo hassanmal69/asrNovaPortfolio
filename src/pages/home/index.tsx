@@ -8,11 +8,12 @@ import { Navbar } from './components/navBar'
 import pic from '../../assets/magicpattern-87PP9Zd7MNo-unsplash.jpg'
 const Home = () => {
   return (
-    <section
+    <section className=""
       style={{
         backgroundImage: `url(${pic})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: " contain"
+        backgroundSize:"220vh"
+        // backgroundSize: " contain"
       }}>
       <Navbar />
       <Hero />
