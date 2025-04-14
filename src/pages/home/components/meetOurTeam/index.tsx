@@ -35,9 +35,10 @@ const MeetourTeam = () => {
         <BgMeetTeam />
       </div>
       <div className="Textcomponent flex justify-center items-center">
-        <h1 className="ethnocentric text-6xl font-extrabold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight">
-          Meet 'The Team'
-        </h1>
+      <h1 className="ethnocentric text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight text-center px-4">
+  Meet 'The Team'
+</h1>
+
       </div>
       <div className="flex justify-between items-center w-full h-full">
         {teamMembers.map((member, index: any) => (
@@ -87,6 +88,8 @@ const MeetourTeam = () => {
                     ease: "linear",
                   }}
                 >
+                  {member.name} {member.name} {member.name} {member.name}{" "}
+                  {member.name} {member.name} {member.name} {member.name}
                   {member.name} {member.name} {member.name} {member.name}{" "}
                   {member.name} {member.name} {member.name} {member.name}
                 </motion.h4>

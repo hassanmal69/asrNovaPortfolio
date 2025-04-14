@@ -19,7 +19,7 @@ const BgMeetTeam = () => {
                     }}
                 />
                 <div className="h-full w-full flex justify-center items-center relative">
-                    <motion.img src={falling} className='w-[700px] z-10'
+                    {/* <motion.img src={falling} className='w-[700px] z-10'
                         animate={{
                             rotate: 160
                         }}
@@ -28,7 +28,7 @@ const BgMeetTeam = () => {
                             repeat: Infinity,
                             repeatType: "reverse",
                             ease: "easeInOut"
-                        }} />
+                        }} /> */}
                     {/* <div className="absolute flex justify-center items-center w-full h-full ">
                         <div className="w-[500px] h-[500px] BluecircleinBG absolute rounded-full"></div>
                     </div> */}

@@ -62,7 +62,7 @@ export const ParallaxScrollSecond = ({
                         style={{ height: lineScale }}
                         className="fixed left-4 top-0 w-[5px] bg-[#5271ff] origin-top z-10"
                     />
-                    <motion.img
+                    {/* <motion.img
                         // initial={{ rotate: 0 }}  // Keep the image in its original direction
                         // animate={{
                         //     rotate: [0, 10, 0],  // A small rotation to simulate the point
@@ -81,8 +81,8 @@ export const ParallaxScrollSecond = ({
                         className="absolute overflow-hidden z-20 w-[200px] h-[200px]"
                         src={MonkeyPoint}
                         alt="Monkey Point"
-                    />
-                    <motion.img src={CatPoint} alt="cattpoining"
+                    /> */}
+                    {/* <motion.img src={CatPoint} alt="cattpoining"
                         className="absolute overflow-hidden z-20 w-[200px] h-[200px]"
                         // initial={{ rotate: 0 }}  // Keep the image in its original direction
                         // animate={{
@@ -99,7 +99,7 @@ export const ParallaxScrollSecond = ({
                             y: catMoving,
                             opacity: catDisplay
                         }}
-                    />
+                    /> */}
                 </div>
             )}
 
