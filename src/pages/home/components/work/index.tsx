@@ -26,17 +26,18 @@ const WorkComponent = () => {
       {isCursorVisible && <div className="customCursor" ref={cursorRef}> <img src={spaceShip} className="w-full h-full" /></div>}
       <div className="blackscreen w-full h-full absolute z-4 pointer-events-none"></div>
       <div className="textContentinwork !mb-30 flex flex-col gap-3 relative z-50">
-        <h1 className="text-6xl text-center font-bold text-white">
-          Our Work
-        </h1>
-        <h3 className="text-2xl text-gray-500 font-light text-center">
-          Empowering businesses with innovative digital solutions – explore our
-          projects that blend creativity, technology, and efficiency.
-        </h3>
+      <h1 className="text-3xl sm:text-6xl text-center font-bold text-white">
+  Our Work
+</h1>
+<p className="text-base sm:text-2xl text-gray-500 font-light text-center px-4">
+  Empowering businesses with innovative digital solutions – explore our
+  projects that blend creativity, technology, and efficiency.
+</p>
+
       </div>
 
       <div className="flex w-[80%] gap-10 relative z-10">
-        {projects.map((project, index) =>
+        {projects.map((project, index: any) =>
           project.img ? (
             <motion.img
               key={index}

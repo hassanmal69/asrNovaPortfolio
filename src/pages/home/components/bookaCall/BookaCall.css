@@ -21,3 +21,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .fields {
   width: 45%;
 }
+
+@media only screen and (max-width: 600px) {
+  .fields {
+    width: 100%;
+  }
+  .field-wrapper {
+    width: calc(100% - 20px);
+    gap: 40px 20px;
+    padding: 0;
+  }
+}

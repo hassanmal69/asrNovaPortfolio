@@ -15,7 +15,7 @@ const Home = () => {
         backgroundSize:"220vh"
         // backgroundSize: " contain"
       }}>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <div className="flex flex-col gap-12 bg-[#000000]  text-white">
         <Services />

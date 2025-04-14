@@ -24,7 +24,7 @@ const Hero = () => {
               Websites Fade, <br /> Stories Last Forever
             </motion.h1>
             <motion.p
-              className="orbitron text-xl text-[#000000] leading-relaxed w-[80%]"
+              className="orbitron text-xl text-[#000000] leading-relaxed w-[80%] sm:w-full "
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
