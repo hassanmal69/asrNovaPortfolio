@@ -48,8 +48,12 @@
   z-index: 1000;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 670px) {
   .textContentinwork h3 {
     width: 100%;
+  }
+  .projects-wrapper {
+    width: 100%;
+    padding: 30px;
   }
 }

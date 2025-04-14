@@ -29,9 +29,9 @@ const BgMeetTeam = () => {
                             repeatType: "reverse",
                             ease: "easeInOut"
                         }} /> */}
-                    {/* <div className="absolute flex justify-center items-center w-full h-full ">
-                        <div className="w-[500px] h-[500px] BluecircleinBG absolute rounded-full"></div>
-                    </div> */}
+                    <div className="absolute flex justify-center items-center w-full h-full">
+                        <div className="w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] BluecircleinBG absolute rounded-full"></div>
+                    </div>
                 </div>
             </div>
 
