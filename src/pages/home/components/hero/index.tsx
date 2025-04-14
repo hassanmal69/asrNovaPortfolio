@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="dumy flex w-[70%] justify-between items-center">
           {/* Text Content */}
           <motion.div
-            className="textContent flex flex-col gap-6 w-[70%] items-start"
+            className="textContent flex flex-col gap-4 w-[70%] items-start"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut' }}
