@@ -9,6 +9,7 @@ const Hero = () => {
       <div className="contentInHeroPage flex flex-col gap-10 w-full h-full justify-center items-center ">
         <div className="flex flex-col sm:flex-row sm:w-[70%] justify-between items-center">
           <motion.div
+
             className="textContent flex flex-col gap-6 sm:w-[70%] items-center sm:items-start"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

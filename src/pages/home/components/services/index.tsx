@@ -48,6 +48,7 @@ const Services = () => {
         }}
       >
       </motion.div>
+
       <motion.h1 className='text-6xl sm:text-8xl font-bold text-center'
         style={{
           opacity: textOpacity,

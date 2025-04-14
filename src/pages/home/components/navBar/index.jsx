@@ -6,7 +6,6 @@ import {
   Briefcase,
   MessageSquare,
 } from "lucide-react";
-// import "./nav.css";
 import { useState } from "react";
 import Logo from "@assets/logo.png";
 export const Navbar = () => {
