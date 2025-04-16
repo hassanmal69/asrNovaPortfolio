@@ -3,7 +3,7 @@ import { motion, useMotionTemplate, useMotionValueEvent, useScroll, useTransform
 import { useRef, useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Image from '@assets/laalanti.jpg'
-import { Timeline, TimelineItem, TimelineMarker, TimelineContent } from '@components/timeline.tsx'
+import { Timeline, TimelineItem, TimelineContent } from '@components/timeline.tsx'
 import { ParallaxScrollSecondDemo } from './cardsShowingParallax'
 const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -48,73 +48,68 @@ const Services = () => {
         }}
       >
       </motion.div>
-      <motion.h1 className='text-4xl sm:text-8xl font-bold text-center mb-7'
-        style={{
-          opacity: textOpacity,
-          scale: textScale,
-          filter: finalBlur,
-          y: textUp
-        }}>Our Services</motion.h1> 
-{isMobile ? (
-  <div className="w-full px-4 mt-10">
-    <Timeline>
-      {servicesContent.services.map((service, index) => (
-        <TimelineItem key={index}>
-          <TimelineContent>
-            <ParallaxScrollSecondDemo services={[service]} containerRefrence={containerRef} />
-          </TimelineContent>
-        </TimelineItem>
-      ))}
-    </Timeline>
-  </div>
-) : (
-  <ParallaxScrollSecondDemo services={servicesContent.services} containerRefrence={containerRef} />
-)}
+      <div className="w-full h-[100vh] sm:h-[150vh]">
+        <motion.h1 className='text-6xl sm:text-8xl font-bold text-center'
+          style={{
+            opacity: textOpacity,
+            scale: textScale,
+            filter: finalBlur,
+            y: textUp
+          }}>Our Vision</motion.h1>
 
+        <motion.div className="imageMainContainer translate-z-[20px] sm:translate-z-[40px] relative flex justify-center items-center shadow-2xl rounded-3xl !-mt-2 w-[90%] h-[350px] sm:w-[70%] sm:h-[700px] border-4"
+          style={{
+            rotateX: rotateX,
+            // translateZ: "40px",
+            y: rotateY,
+            opacity: visible,
+          }}>
 
-{/* 
-      <motion.h1 className='text-6xl sm:text-8xl font-bold text-center'
-        style={{
-          opacity: textOpacity,
-          scale: textScale,
-          filter: finalBlur,
-          y: textUp
-        }}>Our Vision</motion.h1> */}
+          <img className='w-full h-full relative rounded-3xl imginservice' src={Image} />
 
-      {/* <motion.div className="imageMainContainer translate-z-[20px] sm:translate-z-[40px] relative flex justify-center items-center shadow-2xl rounded-3xl !-mt-2 w-[85%] h-[350px] sm:w-[70%] sm:h-[700px] border-4"
-        style={{
-          rotateX: rotateX,
-          // translateZ: "40px",
-          y: rotateY,
-          opacity: visible,
-        }}>
+          <motion.p
+            ref={textRef}
+            className="absolute text-white px-4 py-2 flex gap-1 sm:gap-2 w-[90%] sm:w-[50%] bg-opacity-50 rounded-md flex-wrap">
+            {servicesContent.intro.split(" ").map((word, index) => {
+              const delay = index * 0.05; // Stagger effect
 
-        <img className='w-full h-full relative rounded-3xl imginservice' src={Image} />
+              return (
+                <motion.span
+                  key={index}
+                  className="inline-block text-sm sm:text-2xl font-extrabold "
+                  style={{ display: "inline-block", whiteSpace: "nowrap" }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Trigger only when in view
+                  transition={{ duration: 0.5, delay: delay }}
+                >
+                  {word}
+                </motion.span>
+              );
+            })}
+          </motion.p>
 
-        <motion.p
-          ref={textRef}
-          className="absolute text-white px-4 py-2 flex gap-2 w-[90%] sm:w-[50%] bg-opacity-50 rounded-md flex-wrap">
-          {servicesContent.intro.split(" ").map((word, index) => {
-            const delay = index * 0.05; // Stagger effect
-
-            return (
-              <motion.span
-                key={index}
-                className="inline-block text-sm sm:text-2xl font-extrabold "
-                style={{ display: "inline-block", whiteSpace: "nowrap" }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Trigger only when in view
-                transition={{ duration: 0.5, delay: delay }}
-              >
-                {word}
-              </motion.span>
-            );
-          })}
-        </motion.p>
-
-      </motion.div> */}
-      <div className="relative z-30">
-        <p className='text-amber-50'>{servicesContent.closing}</p>
+        </motion.div>
+      </div>
+      <div className="flex flex-col gap-24">
+        <motion.h1 className='text-4xl sm:text-8xl font-bold text-center mb-7'>Our Services</motion.h1>
+        {isMobile ? (
+          <div className="w-full px-4 mt-10">
+            <Timeline>
+              {servicesContent.services.map((service, index) => (
+                <TimelineItem key={index}>
+                  <TimelineContent>
+                    <ParallaxScrollSecondDemo services={[service]} containerRefrence={containerRef} />
+                  </TimelineContent>
+                </TimelineItem>
+              ))}
+            </Timeline>
+          </div>
+        ) : (
+          <ParallaxScrollSecondDemo services={servicesContent.services} containerRefrence={containerRef} />
+        )}
+        <div className="relative z-30">
+          <p className='text-amber-50'>{servicesContent.closing}</p>
+        </div>
       </div>
     </motion.div>
   )
