@@ -20,7 +20,7 @@ const WorkComponent = () => {
 
   const cursorRef = useRef(null);
   const containerRef = useRef(null);
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e:any) => {
     if (cursorRef.current) {
       cursorRef.current.style.left = `${e.clientX}px`;
       cursorRef.current.style.top = `${e.clientY}px`;
