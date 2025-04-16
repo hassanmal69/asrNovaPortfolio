@@ -1,9 +1,9 @@
-
 import './service.css'
 import { motion, useMotionTemplate, useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
-import Image from '../../../../assets/laalanti.jpg'
+import Image from '@assets/laalanti.jpg'
+import { Timeline, TimelineItem, TimelineMarker, TimelineContent } from '@components/timeline.tsx'
 import { ParallaxScrollSecondDemo } from './cardsShowingParallax'
 const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -48,16 +48,40 @@ const Services = () => {
         }}
       >
       </motion.div>
+      <motion.h1 className='text-4xl sm:text-8xl font-bold text-center mb-7'
+        style={{
+          opacity: textOpacity,
+          scale: textScale,
+          filter: finalBlur,
+          y: textUp
+        }}>Our Services</motion.h1> 
+{isMobile ? (
+  <div className="w-full px-4 mt-10">
+    <Timeline>
+      {servicesContent.services.map((service, index) => (
+        <TimelineItem key={index}>
+          <TimelineContent>
+            <ParallaxScrollSecondDemo services={[service]} containerRefrence={containerRef} />
+          </TimelineContent>
+        </TimelineItem>
+      ))}
+    </Timeline>
+  </div>
+) : (
+  <ParallaxScrollSecondDemo services={servicesContent.services} containerRefrence={containerRef} />
+)}
 
+
+{/* 
       <motion.h1 className='text-6xl sm:text-8xl font-bold text-center'
         style={{
           opacity: textOpacity,
           scale: textScale,
           filter: finalBlur,
           y: textUp
-        }}>Our Vision</motion.h1>
+        }}>Our Vision</motion.h1> */}
 
-      <motion.div className="imageMainContainer translate-z-[20px] sm:translate-z-[40px] relative flex justify-center items-center shadow-2xl rounded-3xl !-mt-2 w-[85%] h-[350px] sm:w-[70%] sm:h-[700px] border-4"
+      {/* <motion.div className="imageMainContainer translate-z-[20px] sm:translate-z-[40px] relative flex justify-center items-center shadow-2xl rounded-3xl !-mt-2 w-[85%] h-[350px] sm:w-[70%] sm:h-[700px] border-4"
         style={{
           rotateX: rotateX,
           // translateZ: "40px",
@@ -88,8 +112,7 @@ const Services = () => {
           })}
         </motion.p>
 
-      </motion.div>
-      <ParallaxScrollSecondDemo containerRefrence={containerRef} />
+      </motion.div> */}
       <div className="relative z-30">
         <p className='text-amber-50'>{servicesContent.closing}</p>
       </div>

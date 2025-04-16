@@ -3,8 +3,6 @@ import { useScroll, useTransform } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "../../../../lib/utils";
 import { useEffect, useState } from "react";
-import MonkeyPoint from '../../../../assets/monkeyshowing.png'
-import CatPoint from '../../../../assets/catand mobile.png'
 export const ParallaxScrollSecond = ({
     images,
     className,
@@ -133,7 +131,7 @@ export const ParallaxScrollSecond = ({
 
                 {/* Second Column */}
                 <div className="grid gap-10 w-full justify-end">
-                    {secondPart.map((el, idx) => (
+                    {secondPart.map((el:any, idx) => (
                         <motion.div className="relative" key={"grid-2" + idx}>
                             <img
                                 src={el.img}
@@ -152,7 +150,7 @@ export const ParallaxScrollSecond = ({
 
                 {/* Third Column */}
                 <div className="grid gap-10 w-full justify-end">
-                    {thirdPart.map((el, idx) => (
+                    {thirdPart.map((el:any, idx) => (
                         <motion.div
                             className="relative"
                             style={{
