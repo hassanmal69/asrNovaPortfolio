@@ -3,8 +3,9 @@ import { motion, useMotionTemplate, useMotionValueEvent, useScroll, useTransform
 import { useRef, useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Image from '@assets/laalanti.jpg'
-import { Timeline, TimelineItem, TimelineContent } from '@components/timeline.tsx'
+import { ParallaxScrollSecond } from "./parallax-scroll-2";
 import { ParallaxScrollSecondDemo } from './cardsShowingParallax'
+import { title } from 'process'
 const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: containerRef })
@@ -31,7 +32,11 @@ const Services = () => {
   const finalBlur = useMotionTemplate`blur(${textBlur}px)`
   const yPosforBg = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5, 0.7], [0, 100, 500, 700, 900])
   const bgOpacity = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5], [1, 0.9, 0.7, 0.5]); const { ref: textRef, inView } = useInView({ triggerOnce: false, threshold: 0.2 })
-
+  const Images = servicesContent.services.map((service: { title: String; description: String; }) => ({
+    title: service.title,
+    description: service.description,
+    img: "https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+  }))
   return (
     <motion.div
       ref={containerRef}
@@ -92,21 +97,8 @@ const Services = () => {
       </div>
       <div className="flex flex-col gap-24">
         <motion.h1 className='text-4xl sm:text-8xl font-bold text-center mb-7'>Our Services</motion.h1>
-        {isMobile ? (
-          <div className="w-full px-4 mt-10">
-            <Timeline>
-              {servicesContent.services.map((service, index) => (
-                <TimelineItem key={index}>
-                  <TimelineContent>
-                    <ParallaxScrollSecondDemo services={[service]} containerRefrence={containerRef} />
-                  </TimelineContent>
-                </TimelineItem>
-              ))}
-            </Timeline>
-          </div>
-        ) : (
-          <ParallaxScrollSecondDemo services={servicesContent.services} containerRefrence={containerRef} />
-        )}
+        <ParallaxScrollSecond images={Images} />
+
         <div className="relative z-30">
           <p className='text-amber-50'>{servicesContent.closing}</p>
         </div>
