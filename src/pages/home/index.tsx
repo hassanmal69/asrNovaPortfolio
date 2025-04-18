@@ -6,7 +6,8 @@ import Footer from "./components/footer"
 import MeetourTeam from "./components/meetOurTeam"
 import { Navbar } from './components/navBar'
 import pic from '../../assets/magicpattern-87PP9Zd7MNo-unsplash.jpg'
-import WhyChoose from "./components/whyChoose"
+import WhyChoose, { HeroParallaxDemo } from "./components/whyChoose"
+import { GlowingEffectDemo } from "./components/whyChoose/gloweffect"
 const Home = () => {
   return (
     <section className=""
@@ -22,7 +23,8 @@ const Home = () => {
         <Services />
         <WorkComponent />
         <MeetourTeam />
-        <WhyChoose/>
+        {/* <HeroParallaxDemo/> */}
+        <GlowingEffectDemo/>
         <BookaCall />
         <Footer />
       </div>
