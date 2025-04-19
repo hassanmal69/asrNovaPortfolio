@@ -6,15 +6,15 @@ import Footer from "./components/footer"
 import MeetourTeam from "./components/meetOurTeam"
 import { Navbar } from './components/navBar'
 import pic from '../../assets/magicpattern-87PP9Zd7MNo-unsplash.jpg'
-import WhyChoose, { HeroParallaxDemo } from "./components/whyChoose"
 import { GlowingEffectDemo } from "./components/whyChoose/gloweffect"
+import ChatSystem from "./components/chat"
 const Home = () => {
   return (
     <section className=""
       style={{
         backgroundImage: `url(${pic})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize:"220vh"
+        backgroundSize:"220vh",
         // backgroundSize: " contain"
       }}>
       {/* <Navbar /> */}
@@ -23,10 +23,11 @@ const Home = () => {
         <Services />
         <WorkComponent />
         <MeetourTeam />
-        {/* <HeroParallaxDemo/> */}
         <GlowingEffectDemo/>
         <BookaCall />
+        <ChatSystem/>
         <Footer />
+
       </div>
     </section >
   )

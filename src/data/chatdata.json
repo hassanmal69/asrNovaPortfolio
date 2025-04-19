@@ -1,0 +1,133 @@
+{
+    "faqs": [
+      {
+        "question": "HEY HOW ARE YOU",
+        "answer": "CHANGA"
+      },
+      {
+        "question": "What services does Asrnova offer?",
+        "answer": "At Asrnova, we build real software—scalable, high‑performance solutions. Our services include Web Development, App Development, SaaS Development, AI & Machine Learning, AR & VR Solutions, Web3 & Blockchain, and Automation & Custom Integrations."
+      },
+      {
+        "question": "What is your web development process?",
+        "answer": "Our web development process starts with requirements gathering and wireframing, moves on to UI/UX design, then to front‑end and back‑end implementation, followed by testing and QA, and concludes with deployment and post‑launch support."
+      },
+      {
+        "question": "Which technologies do you use for web development?",
+        "answer": "We specialize in React, Vue, Angular for front‑end; Node.js, Django, Ruby on Rails for back‑end; and databases like PostgreSQL, MongoDB, and MySQL. We also use Tailwind CSS and Material‑UI for styling."
+      },
+      {
+        "question": "Can you build responsive websites?",
+        "answer": "Absolutely. All our websites are fully responsive and optimized for mobile, tablet, and desktop using modern CSS techniques and responsive frameworks."
+      },
+      {
+        "question": "Do you offer e-commerce web development?",
+        "answer": "Yes—we build custom e‑commerce platforms and integrate with Shopify, WooCommerce, Magento, or build headless commerce solutions tailored to your needs."
+      },
+      {
+        "question": "How long does a typical web development project take?",
+        "answer": "Timeline varies by scope, but a standard brochure‑style website takes 4–6 weeks. More complex web apps or platforms can take 3–6 months depending on requirements."
+      },
+      {
+        "question": "What does your app development service include?",
+        "answer": "We develop iOS, Android, and cross‑platform apps using Swift, Kotlin, React Native, and Flutter. Our service covers UI/UX design, API integration, testing, and deployment to App Store and Google Play."
+      },
+      {
+        "question": "Can you integrate mobile apps with existing systems?",
+        "answer": "Yes. We connect mobile apps to your existing CMS, CRM, or custom back‑end systems via secure REST or GraphQL APIs."
+      },
+      {
+        "question": "What is SaaS development and do you offer it?",
+        "answer": "SaaS (Software‑as‑a‑Service) is cloud‑hosted software accessed via subscription. We build end‑to‑end SaaS platforms—handling multi‑tenant architecture, subscription billing, security, and scalability."
+      },
+      {
+        "question": "Which cloud platforms do you use for SaaS?",
+        "answer": "We deploy SaaS solutions on AWS, Azure, and Google Cloud, using Docker and Kubernetes for containerization and orchestration."
+      },
+      {
+        "question": "What AI and Machine Learning services do you provide?",
+        "answer": "We build AI‑powered chatbots, predictive analytics models, computer vision systems, and recommendation engines. We use TensorFlow, PyTorch, and scikit‑learn for model development."
+      },
+      {
+        "question": "Can you integrate AI into our existing products?",
+        "answer": "Yes, we can add AI modules—such as NLP chatbots or image‑recognition features—to your existing applications via APIs or microservices."
+      },
+      {
+        "question": "What are AR & VR solutions?",
+        "answer": "AR (Augmented Reality) and VR (Virtual Reality) solutions blend digital content with the real world (AR) or create fully immersive environments (VR). We develop apps for education, retail, real estate, and gaming."
+      },
+      {
+        "question": "Which frameworks do you use for AR/VR?",
+        "answer": "We use Unity3D, Unreal Engine, WebXR, and ARKit/ARCore to build immersive experiences on mobile and web."
+      },
+      {
+        "question": "What is Web3 and Blockchain development?",
+        "answer": "Web3 refers to decentralized web technologies. We build NFT marketplaces, DeFi platforms, smart contracts, and DApps using Ethereum, Solidity, Polkadot, and IPFS."
+      },
+      {
+        "question": "Can you audit smart contracts?",
+        "answer": "Yes, we conduct smart contract audits, vulnerability assessments, and gas‑optimization for your Ethereum or Binance Smart Chain contracts."
+      },
+      {
+        "question": "What custom automation solutions do you offer?",
+        "answer": "We automate workflows by integrating CRMs, ERPs, email services, and third‑party APIs. We can build custom bots or use platforms like Zapier and Integromat."
+      },
+      {
+        "question": "Do you provide API development and integrations?",
+        "answer": "Absolutely. We design and build RESTful and GraphQL APIs, and integrate with payment gateways, social media, analytics, and other services."
+      },
+      {
+        "question": "What is your pricing model?",
+        "answer": "We offer fixed‑price quotes for well‑defined scopes and time‑and‑materials for more flexible projects. Please contact us for a detailed estimate."
+      },
+      {
+        "question": "How do I get a quote for my project?",
+        "answer": "Fill out our contact form or email us at contact@asrnova.com with your requirements. We’ll set up a discovery call and send you a detailed proposal."
+      },
+      {
+        "question": "Do you sign NDAs?",
+        "answer": "Yes, we can sign non‑disclosure agreements to protect your intellectual property and business data."
+      },
+      {
+        "question": "What is your development methodology?",
+        "answer": "We follow Agile Scrum practices—delivering iterative sprints, holding regular stand‑ups, and maintaining transparency via project management tools like Jira or Trello."
+      },
+      {
+        "question": "Do you offer post‑launch support and maintenance?",
+        "answer": "Yes, we provide support packages including bug fixes, feature enhancements, security patches, and 24/7 monitoring if required."
+      },
+      {
+        "question": "How do you ensure security in your projects?",
+        "answer": "We follow OWASP guidelines, conduct code reviews, implement HTTPS, encryption, and regular security audits to protect your applications."
+      },
+      {
+        "question": "Can you share case studies or references?",
+        "answer": "Definitely. We have delivered projects in fintech, edtech, e‑commerce, and healthcare. Email us to request specific case studies or client references."
+      },
+      {
+        "question": "What industries do you specialize in?",
+        "answer": "We have experience in startups, enterprise, education, finance, healthcare, retail, and more. Our versatile team adapts to domain‑specific needs quickly."
+      },
+      {
+        "question": "How do you handle performance and scalability?",
+        "answer": "We use cloud‑native architectures, microservices, load balancing, CDNs, and caching strategies to ensure high performance and scalability."
+      },
+      {
+        "question": "Can I hire you for just a part of the project?",
+        "answer": "Yes, we offer team augmentation and staff‑augmentation services if you need experts to join your existing development team."
+      },
+      {
+        "question": "Do you provide UI/UX design services?",
+        "answer": "Yes, we have a dedicated UI/UX team that handles user research, wireframing, prototyping, and high‑fidelity design using Figma and Adobe XD."
+      },
+      {
+        "question": "How do you communicate progress?",
+        "answer": "We provide weekly progress reports, demos at the end of each sprint, and hold regular video calls to keep you updated."
+      },
+      {
+        "question": "What is your refund policy?",
+        "answer": "We don’t take payment until milestones are agreed upon. If you’re not satisfied at a milestone, we’ll work until you are or refund the payment for that milestone."
+      }
+    ]
+  }
+  
