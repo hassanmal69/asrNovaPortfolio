@@ -26,6 +26,7 @@
     "react-dom": "^19.0.0",
     "react-intersection-observer": "^9.16.0",
     "react-phone-input-2": "^2.15.1",
+    "string-similarity-js": "^2.1.4",
     "tailwind-merge": "^3.2.0",
     "tailwindcss": "^4.0.12"
   },

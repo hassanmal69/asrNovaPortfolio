@@ -63,6 +63,7 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
           borderWidth={3}
           spread={80}
           glow={true}
+          disabled={false}
           proximity={64}
           inactiveZone={0.01}
         />
