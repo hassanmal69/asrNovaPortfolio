@@ -8,6 +8,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Logo from "@assets/logo.png";
+import ChatSystem from '../chat/index'
+import {AnimatedModalDemo} from '../chat/model.tsx'
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,14 +18,14 @@ export const Navbar = () => {
     { name: "Service" },
     { name: "Work" },
     { name: "Testimonials" },
+    { name: "Chat Support" }
   ];
 
   return (
     <header className="!sticky top-0 left-0 right-0 !z-[150000] flex justify-center">
       <nav
-        className={`relative flex items-center justify-between w-full max-w-4xl !px-4 !py-2  mx-4 mt-4 rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-lg ${
-          isOpen ? "rounded-2xl" : "rounded-full"
-        } transition-all duration-300`}
+        className={`relative flex items-center justify-between w-full max-w-4xl !px-4 !py-2  mx-4 mt-4 rounded-full backdrop-blur-md bg-white/10 border border-white/20 shadow-lg ${isOpen ? "rounded-2xl" : "rounded-full"
+          } transition-all duration-300`}
       >
         <img className="w-[150px]" src={Logo} alt="ASRNOVA" />
         {/* Desktop Navigation */}
@@ -34,7 +36,7 @@ export const Navbar = () => {
               href={`#${item.name.toLowerCase()}`}
               className="flex items-center  text-sm font-medium text-white transition-colors rounded-full hover:bg-white/20"
             >
-              <span className="ml-2">{item.name}</span>
+              <span className="ml-2">{item.name === 'Chat Support' ? <AnimatedModalDemo /> : item.name}</span>
             </a>
           ))}
         </div>

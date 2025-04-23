@@ -8,24 +8,30 @@ import { Navbar } from './components/navBar'
 import pic from '../../assets/magicpattern-87PP9Zd7MNo-unsplash.jpg'
 import { GlowingEffectDemo } from "./components/whyChoose/gloweffect"
 import ChatSystem from "./components/chat"
+import { AnimatedModalDemo } from "./components/chat/model"
+import '../../global.css'
 const Home = () => {
   return (
     <section className=""
       style={{
         backgroundImage: `url(${pic})`,
         backgroundRepeat: "no-repeat",
-        backgroundSize:"220vh",
+        backgroundSize: "220vh",
         // backgroundSize: " contain"
       }}>
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
+      {/* <div className="UA ">
+        <AnimatedModalDemo />
+      </div> */}
       <div className="flex flex-col gap-12 bg-[#000000]  text-white">
         <Services />
         <WorkComponent />
         <MeetourTeam />
-        <GlowingEffectDemo/>
+        <div className="UA">
+          <GlowingEffectDemo />
+        </div>
         <BookaCall />
-        <ChatSystem/>
         <Footer />
 
       </div>
