@@ -7,11 +7,8 @@
   box-sizing: border-box;
 }
 
-body,
-div,
-section,
-article {
-  transform-style: preserve-3d;
+* {
+  transform-style:preserve-3d !important;
 }
 
 *,
@@ -26,7 +23,9 @@ body {
   --duration: 2s;
   --delay: -3s;
 }
-
+.UA *{
+  transform-style: flat !important;
+}
 @font-face {
   font-family: "Azonix";
   src: url("/public/fonts/azonix/Azonix.otf") format("opentype");
