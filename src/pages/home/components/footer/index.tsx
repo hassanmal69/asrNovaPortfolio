@@ -1,4 +1,4 @@
-import { TextHoverEffect } from "./text-hover-effect"
+import { TextHoverEffect } from "@components/text-hover-effect"
 import './footer.css'
 const Footer = () => {
   return (

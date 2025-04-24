@@ -1,5 +1,4 @@
-"use client";
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion } from "motion/react";
 
 export const TextHoverEffect = ({
@@ -93,7 +92,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-200 font-[helvetica] text-6xl font-bold bg-gradient-to-r from-[#5454D4] to-[#8C8CFF] bg-clip-text text-transparent "
+        className="fill-transparent marzi-ka-font stroke-neutral-200 font-[helvetica] text-6xl font-bold bg-gradient-to-r from-[#5454D4] to-[#8C8CFF] bg-clip-text text-transparent "
         style={{ opacity: hovered ? 0.7 : 0 }}
       >
         {text}
@@ -104,7 +103,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="fill-transparent bg-gradient-to-r from-[#5454D4] to-[#8C8CFF] bg-clip-text text-transparent  font-[helvetica] text-6xl font-bold dark:stroke-neutral-800"
+        className="fill-transparent marzi-ka-font bg-gradient-to-r from-[#5454D4] to-[#8C8CFF] bg-clip-text text-transparent  font-[helvetica] text-6xl font-bold dark:stroke-neutral-800"
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
         animate={{
           strokeDashoffset: 0,
@@ -125,10 +124,11 @@ export const TextHoverEffect = ({
         stroke="url(#textGradient)"
         strokeWidth="0.3"
         mask="url(#textMask)"
-        className="fill-transparent font-[helvetica] text-6xl font-bold bg-gradient-to-r from-[#5454D4] to-[#8C8CFF] bg-clip-text text-transparent "
+        className="fill-transparent marzi-ka-font text-6xl font-bold bg-gradient-to-r from-[#5454D4] to-[#8C8CFF] bg-clip-text text-transparent "
       >
         {text}
       </text>
     </svg>
   );
 };
+// marzi-ka-font: this class is written by moiz.

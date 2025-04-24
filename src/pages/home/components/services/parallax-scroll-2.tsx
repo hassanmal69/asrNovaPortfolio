@@ -3,11 +3,11 @@ import { motion } from "motion/react";
 import { cn } from "../../../../lib/utils";
 import { useEffect, useState } from "react";
 export const ParallaxScrollSecond = ({
-    images,
+    payload,
     className,
     containerRefrence
 }: {
-    images: string[];
+    payload?: string | any;
     className?: string;
     containerRefrence: React.RefObject<HTMLElement>;
 }) => {
@@ -41,10 +41,10 @@ export const ParallaxScrollSecond = ({
     const translateXThird = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 200]);
     const rotateXThird = useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 20]);
 
-    const third = Math.ceil(images.length / 4);
-    const firstPart = images.slice(0, third);
-    const secondPart = images.slice(third, 2 * third);
-    const thirdPart = images.slice(2 * third);
+    const third = Math.ceil(payload.length / 4);
+    const firstPart = payload.slice(0, third + 1 );
+    const secondPart = payload.slice(third, 3 * third);
+    const thirdPart = payload.slice(2 * third);
 
     return (
         <div className={cn("relative items-start w-full", className)}>
@@ -60,9 +60,9 @@ export const ParallaxScrollSecond = ({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 py-40 px-10">
                 {/* First Column */}
                 <div className="grid gap-10 w-full justify-end">
-                    {firstPart.map((el:any, idx) => (
+                    {firstPart.map((el:string | any, idx:number) => (
                         <motion.div
-                            className="relative"
+                            className="services-cards"
                             style={{
                                 y: translateYFirst,
                                 x: translateXFirst,
@@ -72,14 +72,13 @@ export const ParallaxScrollSecond = ({
                         >
                             <img
                                 src={el.img}
-                                className="h-50 sm:h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                                height="400"
+                                className="rounded-lg "
                                 width="400"
                                 alt="thumbnail"
                             />
-                            <div className="absolute !px-[10px] sm:!p-0 bottom-2 flex flex-col gap-2 items-center justify-center">
-                                <h1 className="text-l sm:text-xl font-semibold mt-2">{el.title}</h1>
-                                <p className="text-xs text-center sm:text-sm text-gray-500">{el.description}</p>
+                            <div className="flex flex-col  items-center justify-center">
+                                <h1 className="ethnocentric text-center sm:text-xl font-semibold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight">{el.title}</h1>
+                                <p className="text-center sm:text-[14px] text-[#eee]">{el.description}</p>
                             </div>
                         </motion.div>
                     ))}
@@ -87,18 +86,19 @@ export const ParallaxScrollSecond = ({
 
                 {/* Second Column */}
                 <div className="grid gap-10 w-full justify-end">
-                    {secondPart.map((el:any, idx) => (
-                        <motion.div className="relative" key={"grid-2" + idx}>
-                            <img
+                    {secondPart.map((el: string | any, idx: number) => (
+                        <motion.div
+                        className="services-cards"
+                        key={"grid-2" + idx}>
+                         <img
                                 src={el.img}
-                                className="h-50 sm:h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
-                                height="100%"
-                                width="100%"
+                                className="rounded-lg "
+                                width="400"
                                 alt="thumbnail"
                             />
-                            <div className="absolute !px-[10px] sm:!p-0 bottom-2 flex flex-col gap-2 items-center justify-center">
-                                <h1 className="text-l sm:text-xl font-semibold mt-2">{el.title}</h1>
-                                <p className="text-xs text-center sm:text-sm text-gray-500">{el.description}</p>
+                            <div className="flex flex-col  items-center justify-center">
+                                <h1 className="ethnocentric text-center sm:text-xl font-semibold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight">{el.title}</h1>
+                                <p className="text-center sm:text-[14px] text-[#eee]">{el.description}</p>
                             </div>
                         </motion.div>
                     ))}
@@ -106,26 +106,25 @@ export const ParallaxScrollSecond = ({
 
                 {/* Third Column */}
                 <div className="grid gap-10 w-full justify-end">
-                    {thirdPart.map((el:any, idx:number) => (
+                    {thirdPart.map((el:string | any, idx:number) => (
                         <motion.div
-                            className="relative"
-                            style={{
-                                y: translateYThird,
-                                x: translateXThird,
-                                rotateZ: rotateXThird,
-                            }}
-                            key={"grid-3" + idx}
+                        className="services-cards"
+                        style={{
+                            y: translateYThird,
+                            x: translateXThird,
+                            rotateZ: rotateXThird,
+                        }}
+                        key={"grid-3" + idx}
                         >
-                            <img
+                         <img
                                 src={el.img}
-                                className="h-50 sm:h-80 w-full object-cover object-left-top rounded-2xl gap-10 !m-0 !p-0"
-                                height="400"
+                                className="rounded-lg "
                                 width="400"
                                 alt="thumbnail"
                             />
-                            <div className="absolute !px-[10px] sm:!p-0 bottom-2 flex flex-col gap-2 items-center justify-center">
-                                <h1 className="text-l text-center sm:text-xl font-semibold mt-2">{el.title}</h1>
-                                <p className="text-xs text-center sm:text-sm text-gray-500">{el.description}</p>
+                            <div className="flex flex-col  items-center justify-center">
+                                <h1 className="ethnocentric text-center sm:text-xl font-semibold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight">{el.title}</h1>
+                                <p className="text-center sm:text-[14px] text-[#eee]">{el.description}</p>
                             </div>
                         </motion.div>
                     ))}

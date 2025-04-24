@@ -4,8 +4,16 @@ import { useRef, useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Image from '@assets/laalanti.jpg'
 import { ParallaxScrollSecond } from "./parallax-scroll-2";
-import { ParallaxScrollSecondDemo } from './cardsShowingParallax'
-import { title } from 'process'
+import Web from "../../../../assets/web.jpeg"
+import App from "../../../../assets/appdev.jpeg"
+import SaaS from "../../../../assets/SaaS.jpeg"
+import AR from "../../../../assets/Ar.jpeg"
+import AI from "../../../../assets/AI.jpeg"
+import Blockchain from "../../../../assets/blockchain.png"
+import Automation from "../../../../assets/automation.png"
+import Design from "../../../../assets/Design.png"
+import { TextHoverEffect } from '../../../../components/text-hover-effect'
+
 const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: containerRef })
@@ -32,10 +40,12 @@ const Services = () => {
   const finalBlur = useMotionTemplate`blur(${textBlur}px)`
   const yPosforBg = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5, 0.7], [0, 100, 500, 700, 900])
   const bgOpacity = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5], [1, 0.9, 0.7, 0.5]); const { ref: textRef, inView } = useInView({ triggerOnce: false, threshold: 0.2 })
-  const Images = servicesContent.services.map((service: { title: String; description: String; }) => ({
+  const Payload = servicesContent.services.map((service: {
+    img: string | any; title: string; description: string; 
+}) => ({
     title: service.title,
     description: service.description,
-    img: "https://images.unsplash.com/photo-1476842634003-7dcca8f832de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+    img: service.img
   }))
   return (
     <motion.div
@@ -54,7 +64,7 @@ const Services = () => {
       >
       </motion.div>
       <div className="w-full h-[100vh] sm:h-[150vh]">
-        <motion.h1 className='text-6xl sm:text-8xl font-bold text-center'
+        <motion.h1 className='ethnocentric text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight text-center px-4'
           style={{
             opacity: textOpacity,
             scale: textScale,
@@ -95,14 +105,14 @@ const Services = () => {
 
         </motion.div>
       </div>
-      <div className="flex flex-col gap-24">
-        <motion.h1 className='text-4xl sm:text-8xl font-bold text-center mb-7'>Our Services</motion.h1>
-        <ParallaxScrollSecond images={Images} />
+      <section className="flex flex-col gap-24 services-section">
+        <TextHoverEffect text='Our Services' />
+        <ParallaxScrollSecond payload={Payload} />
 
         <div className="relative z-30">
           <p className='text-amber-50'>{servicesContent.closing}</p>
         </div>
-      </div>
+      </section>
     </motion.div>
   )
 }
@@ -113,43 +123,57 @@ const servicesContent = {
   title: "Our Services",
   intro:
     "At Asrnova, we build **real** software—scalable, high-performance solutions that power startups, businesses, and educators. Whether you're developing an MVP, automating workflows, or creating an enterprise-grade platform, we turn complex ideas into seamless digital products.",
-  services: [
-    {
-      title: "Web Development",
-      description:
-        "A website isn’t just an online presence—it’s a **fully functional product** that needs to be fast, secure, and scalable. We develop custom web applications, SaaS platforms, and dashboards designed for performance, security, and growth.",
-    },
-    {
-      title: "App Development",
-      description:
-        "We create powerful, scalable mobile applications that go beyond just looking good—they **solve real problems**. Whether it's iOS, Android, or cross-platform, we build apps with high-performance architectures, seamless UX, and future-ready technology.",
-    },
-    {
-      title: "SaaS Development",
-      description:
-        "We specialize in **end-to-end SaaS solutions**—from ideation to deployment. Whether you're building a subscription-based platform, a B2B SaaS tool, or an AI-powered SaaS product, we ensure scalability, security, and seamless user experience.",
-    },
-    {
-      title: "AI & Machine Learning",
-      description:
-        "Artificial Intelligence is transforming industries, and we help businesses leverage **AI-powered automation, chatbots, predictive analytics, and computer vision**. Our AI solutions enhance efficiency and create intelligent digital experiences.",
-    },
-    {
-      title: "AR & VR Solutions",
-      description:
-        "Augmented and Virtual Reality are reshaping digital experiences. We develop **immersive AR/VR applications** for education, retail, real estate, and gaming—blending the digital and physical worlds to create **next-gen interactive experiences**.",
-    },
-    {
-      title: "Web3 & Blockchain",
-      description:
-        "The future is decentralized, and we build **Web3 solutions** that redefine ownership, trust, and security. From **NFT marketplaces and DeFi platforms to smart contracts and decentralized applications (DApps)**, we build cutting-edge blockchain technology.",
-    },
-    {
-      title: "Automation & Custom Integrations",
-      description:
-        "We streamline business workflows with **custom automation solutions**. From API integrations and CRM automation to AI-driven process optimizations, we help businesses operate faster, smarter, and more efficiently.",
-    },
-  ],
+    services: [
+      {
+        title: "Web Development",
+        description:
+          "Your website is more than a digital footprint—it’s a **flagship product**. We engineer custom platforms, marketing sites, SaaS dashboards, and high-performance web apps that are lightning-fast, ultra-secure, and ready to scale with your ambition.",
+        img: Web,
+      },
+      {
+        title: "App Development",
+        description:
+          "We craft mobile apps that don’t just look beautiful—they **work like beasts**. From iOS to Android to cross-platform builds, we architect robust apps with seamless UX, powerful performance, and the flexibility to evolve with your users.",
+        img: App,
+      },
+      {
+        title: "SaaS Development",
+        description:
+          "SaaS is in our DNA. Whether you're bootstrapping a subscription platform or scaling a B2B powerhouse, we handle **everything from MVP to multi-tenant infrastructure**—with elegance, efficiency, and elite-level engineering.",
+        img: SaaS,
+      },
+      {
+        title: "AI & Machine Learning",
+        description:
+          "We don’t just use AI—we build with it. From **predictive analytics and NLP to custom chatbots and computer vision**, we create intelligent systems that learn, adapt, and deliver results that feel like magic—but run on code.",
+        img: AI,
+      },
+      {
+        title: "AR & VR Solutions",
+        description:
+          "Welcome to the future. We design **immersive AR/VR experiences** that blend digital and physical worlds—think virtual showrooms, interactive training, gamified learning, and spatial storytelling that hits different.",
+        img: AR,
+      },
+      {
+        title: "Web3 & Blockchain",
+        description:
+          "Ownership. Transparency. Trust. We build in the decentralized world—**NFT marketplaces, DApps, smart contracts, and DeFi platforms**—with bulletproof security and blockchain logic that’s clean, scalable, and future-proof.",
+        img: Blockchain,
+      },
+      {
+        title: "Automation & Integrations",
+        description:
+          "We connect your tools, sync your data, and automate the chaos. Think **custom APIs, CRMs, webhooks, third-party services, and AI-driven flows**—all talking to each other like they were made to. Because now, they are.",
+        img: Automation,
+      },
+      {
+        title: "UI/UX Design",
+        description:
+          "Design isn’t just how it looks—it’s how it works. We craft **pixel-perfect interfaces, seamless flows, and user-first experiences** that make products feel intuitive, thoughtful, and kind of addictive.",
+        img: Design,
+      },
+    ],
+    
   closing:
     "At Asrnova, we don’t just write code—we build technology that **drives businesses forward**.",
 };
