@@ -4,7 +4,8 @@ import Hassan from "../../../../assets/hassanNFT.webp";
 import Moiz from "../../../../assets/moizNft.webp";
 import Point from "../../../../assets/monkeypointin.webp";
 import Broken from "../../../../assets/12122.webp";
-import catPoint from '../../../../assets/catpoint.png'
+import catPoint from "../../../../assets/catpoint.png";
+import { Heading } from "@components/heading";
 import { useState } from "react";
 
 const teamMembers = [
@@ -35,10 +36,11 @@ const MeetourTeam = () => {
         <BgMeetTeam />
       </div>
       <div className="Textcomponent flex justify-center items-center">
-        <h1 className="ethnocentric text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight text-center px-4">
+        <Heading
+          title="
           Meet 'The Team'
-        </h1>
-
+      "
+        />
       </div>
       <div className="flex justify-between flex-col sm:flex-row items-center w-full h-full">
         {teamMembers.map((member, index: any) => (

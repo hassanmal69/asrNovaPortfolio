@@ -1,48 +1,53 @@
-"use client";
-
 import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import { GlowingEffect } from "./glowing-effect"
+import "./whychoose.css"
+import { Heading } from "@components/heading";
+import { TextHoverEffect } from "../../../../components/text-hover-effect";
 
 export function GlowingEffectDemo() {
   return (
-    <section className="flex flex-col gap-22">
-      <h1 className=" text-6xl font-extrabold text-center">Why ASRNOVA?</h1>
-      <ul className="grid grid-cols-1 h-[44rem] w-[75%] grid-rows-none !gap-10 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
+    <section className="flex flex-col gap-22 whychoose-section">
+      <Heading title="Why Asrnova" />
+      <div className="">
+
+          <ul className="grid grid-cols-1 h-[44rem] w-[75%] grid-rows-none !gap-10 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
         <GridItem
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
           icon={<Box className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="Do things the right way"
-          description="Running out of copy so I'll write anything."
+          title=" Original Ideas Only"
+          description="We don’t recycle old trends or templates. Every project is treated like a fresh canvas — unique, bold, and built from scratch with purpose."
         />
 
         <GridItem
           area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
           icon={<Settings className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="The best AI code editor ever."
-          description="Yes, it's true. I'm not even kidding. Ask my mom if you don't believe me."
+          title="Future-Driven Solutions"
+          description="At asrnova, we don't chase what’s already out there. We craft digital experiences with tomorrow in mind — innovative, scalable, and truly ahead of the curve."
         />
 
         <GridItem
           area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
           icon={<Lock className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="You should buy Aceternity UI Pro"
-          description="It's the best money you'll ever spend"
+          title="No Boring Projects"
+          description="We avoid cookie-cutter sites that lack soul. If it’s been done a thousand times, it’s not for us. We’re here for work that excites and inspires."
         />
 
         <GridItem
           area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
           icon={<Sparkles className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="This card is also built by Cursor"
-          description="I'm not even kidding. Ask my mom if you don't believe me."
+          title="Focused on What Matters"
+          description="Quality over quantity — always. We take on fewer projects so we can go deep, challenge the norm, and deliver work that stands out."
         />
 
         <GridItem
           area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
           icon={<Search className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="Coming soon on Aceternity UI"
-          description="I'm writing the code as I record this, no shit."
+          title="Creative Growth Partners"
+          description="We’re not just developers. We’re collaborators, thinkers, and partners in your journey — helping you explore ideas you didn’t know were possible."
         />
       </ul>
+      </div>
+
     </section>
   );
 }
