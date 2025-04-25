@@ -4,15 +4,15 @@ import { useRef, useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import Image from '@assets/laalanti.jpg'
 import { ParallaxScrollSecond } from "./parallax-scroll-2";
-import Web from "../../../../assets/web.jpeg"
-import App from "../../../../assets/appdev.jpeg"
-import SaaS from "../../../../assets/SaaS.jpeg"
-import AR from "../../../../assets/Ar.jpeg"
-import AI from "../../../../assets/AI.jpeg"
-import Blockchain from "../../../../assets/blockchain.png"
-import Automation from "../../../../assets/automation.png"
-import Design from "../../../../assets/Design.png"
-import { TextHoverEffect } from '../../../../components/text-hover-effect'
+import Web from "@assets/web.jpeg"
+import App from "@assets/appdev.jpeg"
+import SaaS from "@assets/SaaS.jpeg"
+import AR from "@assets/Ar.jpeg"
+import AI from "@assets/AI.jpeg"
+import Blockchain from "@assets/blockchain.png"
+import Automation from "@assets/automation.png"
+import Design from "@assets/Design.png"
+import { TextHoverEffect } from '@components/text-hover-effect'
 
 const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -107,7 +107,7 @@ const Services = () => {
         </motion.div>
       </div>
       <section className="flex flex-col gap-24 services-section">
-        <TextHoverEffect text='Our Services' />
+        <TextHoverEffect text='Our Services'/>
         <ParallaxScrollSecond payload={Payload} />
 
         <div className="relative z-30">
@@ -128,13 +128,13 @@ const servicesContent = {
       {
         title: "Web Development",
         description:
-          "Your website is more than a digital footprint—it’s a **flagship product**. We engineer custom platforms, marketing sites, SaaS dashboards, and high-performance web apps that are lightning-fast, ultra-secure, and ready to scale with your ambition.",
+          "Your website is more than a digital footprint—it’s a flagship product. We engineer custom platforms, marketing sites, SaaS dashboards, and high-performance web apps that are lightning-fast, ultra-secure, and ready to scale with your ambition.",
         img: Web,
       },
       {
         title: "App Development",
         description:
-          "We craft mobile apps that don’t just look beautiful—they **work like beasts**. From iOS to Android to cross-platform builds, we architect robust apps with seamless UX, powerful performance, and the flexibility to evolve with your users.",
+          "We craft mobile apps that don’t just look beautiful—they work like beasts. From iOS to Android to cross-platform builds, we architect robust apps with seamless UX, powerful performance, and the flexibility to evolve with your users.",
         img: App,
       },
       {
@@ -146,35 +146,35 @@ const servicesContent = {
       {
         title: "AI & Machine Learning",
         description:
-          "We don’t just use AI—we build with it. From **predictive analytics and NLP to custom chatbots and computer vision**, we create intelligent systems that learn, adapt, and deliver results that feel like magic—but run on code.",
+          "We don’t just use AI—we build with it. From predictive analytics and NLP to custom chatbots and computer vision, we create intelligent systems that learn, adapt, and deliver results that feel like magic—but run on code.",
         img: AI,
       },
       {
         title: "AR & VR Solutions",
         description:
-          "Welcome to the future. We design **immersive AR/VR experiences** that blend digital and physical worlds—think virtual showrooms, interactive training, gamified learning, and spatial storytelling that hits different.",
+          "Welcome to the future. We design immersive AR/VR experiences that blend digital and physical worlds—think virtual showrooms, interactive training, gamified learning, and spatial storytelling that hits different.",
         img: AR,
       },
       {
         title: "Web3 & Blockchain",
         description:
-          "Ownership. Transparency. Trust. We build in the decentralized world—**NFT marketplaces, DApps, smart contracts, and DeFi platforms**—with bulletproof security and blockchain logic that’s clean, scalable, and future-proof.",
+          "Ownership. Transparency. Trust. We build in the decentralized world NFT marketplaces, DApps, smart contracts, and DeFi platforms—with bulletproof security and blockchain logic that’s clean, scalable, and future-proof.",
         img: Blockchain,
       },
       {
         title: "Automation & Integrations",
         description:
-          "We connect your tools, sync your data, and automate the chaos. Think **custom APIs, CRMs, webhooks, third-party services, and AI-driven flows**—all talking to each other like they were made to. Because now, they are.",
+          "We connect your tools, sync your data, and automate the chaos. Think custom APIs, CRMs, webhooks, third-party services, and AI-driven flows —all talking to each other like they were made to. Because now, they are.",
         img: Automation,
       },
       {
         title: "UI/UX Design",
         description:
-          "Design isn’t just how it looks—it’s how it works. We craft **pixel-perfect interfaces, seamless flows, and user-first experiences** that make products feel intuitive, thoughtful, and kind of addictive.",
+          "Design isn’t just how it looks—it’s how it works. We craft **pixel-perfect interfaces, seamless flows, and user-first experiences that make products feel intuitive, thoughtful, and kind of addictive.",
         img: Design,
       },
     ],
     
   closing:
-    "At Asrnova, we don’t just write code—we build technology that **drives businesses forward**.",
+    "At Asrnova, we don’t just write code—we build technology that **drives businesses forward.",
 };

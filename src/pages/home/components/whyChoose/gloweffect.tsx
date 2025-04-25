@@ -2,14 +2,13 @@ import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import { GlowingEffect } from "./glowing-effect"
 import "./whychoose.css"
 import { Heading } from "@components/heading";
-import { TextHoverEffect } from "../../../../components/text-hover-effect";
 
 export function GlowingEffectDemo() {
   return (
     <section className="flex flex-col gap-22 whychoose-section">
       <Heading title="Why Asrnova" />
-      <div className="">
 
+      <div>
           <ul className="grid grid-cols-1 h-[44rem] w-[75%] grid-rows-none !gap-10 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
         <GridItem
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
@@ -21,15 +20,16 @@ export function GlowingEffectDemo() {
         <GridItem
           area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
           icon={<Settings className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="Future-Driven Solutions"
-          description="At asrnova, we don't chase what’s already out there. We craft digital experiences with tomorrow in mind — innovative, scalable, and truly ahead of the curve."
+          title="No Boring Projects"
+          description="We avoid cookie-cutter sites that lack soul. If it’s been done a thousand times, it’s not for us. We’re here for work that excites and inspires."
+         
         />
 
         <GridItem
           area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
           icon={<Lock className="h-4 w-4 text-black dark:text-neutral-400" />}
-          title="No Boring Projects"
-          description="We avoid cookie-cutter sites that lack soul. If it’s been done a thousand times, it’s not for us. We’re here for work that excites and inspires."
+          title="Future Driven Solution"
+          description="At asrnova, we don't chase what’s already out there. We craft digital experiences with tomorrow in mind — innovative, scalable, and truly ahead of the curve."          
         />
 
         <GridItem
