@@ -10,6 +10,7 @@ import { GlowingEffectDemo } from "./components/whyChoose/gloweffect"
 import ChatSystem from "./components/chat"
 import { AnimatedModalDemo } from "./components/chat/model"
 import '../../global.css'
+import Timeline from "./components/services/component/timeline"
 const Home = () => {
   return (
     <section className=""
@@ -19,21 +20,20 @@ const Home = () => {
         backgroundSize: "220vh",
         // backgroundSize: " contain"
       }}>
-      <Navbar />
-      <Hero />
+      {/* <Navbar /> */}
+      {/* <Hero /> */}
       {/* <div className="UA ">
         <AnimatedModalDemo />
       </div> */}
       <div className="flex flex-col gap-12 bg-[#000000]  text-white">
         <Services />
-        <WorkComponent />
+        {/* <WorkComponent />
         <MeetourTeam />
         <div className="UA">
           <GlowingEffectDemo />
         </div>
         <BookaCall />
-        <Footer />
-
+        <Footer /> */}
       </div>
     </section >
   )
