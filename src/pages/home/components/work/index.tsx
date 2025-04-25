@@ -29,6 +29,7 @@ const WorkComponent = () => {
   };
   return (
     <motion.section
+    id="work"
       onMouseMove={handleMouseMove}
       ref={containerRef}
       onMouseEnter={() => setCursorVisible(true)}

@@ -48,7 +48,8 @@ const Services = () => {
     img: service.img
   }))
   return (
-    <motion.div
+    <motion.div 
+    id='service'
       ref={containerRef}
       className='mainSectionService flex flex-col items-center  bg-black w-full  !py-10'>
       <motion.div

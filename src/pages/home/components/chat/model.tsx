@@ -10,13 +10,15 @@ import React, { useState } from 'react'
 import { stringSimilarity } from "string-similarity-js";
 import FaqData from '../../../../data/chatdata.json'
 import chatMan from '../../../../assets/chatman.png'
+import './model.css'
 export function AnimatedModalDemo() {
   const [msg, setMsg] = useState("")
-  const [similar, setSimilar] = useState(null)
+  const [similar, setSimilar] = useState("")
+  const [ask, setAsk] = useState(false)
   const handleCheck = () => {
     let bestScore = 0;
     let bestMatch = null;
-
+    setAsk(true)
     FaqData.faqs.forEach((f) => {
       const similarity = stringSimilarity(msg.toLowerCase(), f.question.toLowerCase())
       if (similarity > bestScore) {
@@ -40,22 +42,51 @@ export function AnimatedModalDemo() {
         <ModalBody>
           <ModalContent>
             <div className="flex flex-row-reverse h-full w-full">
-              <img src={chatMan} className='h-[250px]' />
-              <div className="h-full w-full flex justify-end items-end">
+              <motion.img src={chatMan} className='h-[270px]'
+                animate={{
+                  rotate: [0, 10, -10, 10, -10, 0], // waving effect
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatDelay: 0,
+                }} />
+              <div className="relative h-full w-full flex justify-end gap-2 items-end">
                 <input
-                  className='border-2 border-amber-50 left-0'
+                  className='border-2 border-amber-50 left-0 rounded-2xl !p-2 !pb-0'
                   type="text"
                   value={msg}
                   onChange={(e) => setMsg(e.target.value)}
                 />
-                <button onClick={handleCheck}>ask</button>
-              {similar && (
-                <div className=" h-full w-full flex items-center justify-center">
-                  <ul>
-                    <li> {similar.answer}</li>
-                  </ul>
-                </div>
-              )}
+                <button onClick={handleCheck} className="">Send</button>
+                {ask ? (
+                  similar ? (
+                    <div className="absolute h-full w-full flex items-center justify-center pointer-events-none">
+                      <div className="bg-gray-800 w-full tooltip">
+                        <ul className="w-full">
+                          <li className="w-full h-full text-xs">{similar.answer}</li>
+                        </ul>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="absolute h-full w-full flex items-center justify-center pointer-events-none">
+                      <div className="bg-gray-800 w-full tooltip">
+                        <ul className="w-full">
+                          <li className="w-full h-full text-xs">Sorry, I couldn't find an answer.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  )
+                ) : (
+                  <div className="absolute h-full w-full flex items-center justify-center pointer-events-none">
+                    <div className="bg-gray-800 w-full tooltip">
+                      <ul className="w-full">
+                        <li className="w-full h-full text-xs">You are not a drop in the ocean. You are the entire ocean, in a drop. Ask away.</li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+
               </div>
 
             </div>
