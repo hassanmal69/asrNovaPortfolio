@@ -7,8 +7,10 @@
     top: -250px;
     right: -70px;
     border-radius: 50%;
-    background-image: url('https://www.solarsystemscope.com/textures/download/2k_moon.jpg');
-    background-size: 110% 100%;
+    background-image: url('../../../../../assets/moon.webp');
+    background-size:130% 120%;
+    background-position-y: center !important;
+    background-repeat: no-repeat;
     animation-name: moonRotation;
     animation-duration: 15s;
     animation-timing-function: linear;
@@ -22,15 +24,15 @@
 
 @keyframes moonRotation {
     0% {
-        background-position: 0% 0%;
+        background-position: 30% 0%;
     }
 
     50% {
-        background-position: 150% 0%;
+        background-position: 50% 0%;
     }
 
     100% {
-        background-position: 300% 0%;
+        background-position: 80% 0%;
     }
 }
 

@@ -9,7 +9,7 @@ export function GlowingEffectDemo() {
       <Heading title="Why Asrnova" />
 
       <div>
-          <ul className="grid grid-cols-1 h-[44rem] w-[75%] grid-rows-none !gap-10 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
+          <ul className="grid grid-cols-1 sm:h-[44rem] w-[75%] grid-rows-none !gap-10 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
         <GridItem
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
           icon={<Box className="h-4 w-4 text-black dark:text-neutral-400" />}

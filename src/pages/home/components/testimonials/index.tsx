@@ -1,31 +1,42 @@
-import Testimonial from "@assets/testimonial.svg";
-import Mudaris from "@assets/mudaris.png";
-import "./testimonials.css";
-import { Heading } from "@components/heading";
+import { motion } from "framer-motion";
+import Dr from '../../../../assets/dr.png'
 const Testimonials = () => {
   return (
-    <section className="testimonials-section w-[100%] max-sm:w-full ">
-      <Heading title="Testimonial" />
+    <div className='w-full relative h-[100vh] sm:h-[140vh] !overflow-hidden' id='testimonials'>
+      <h1 className='text-4xl sm:text-6xl !mb-20 text-center'>Our Testimonials</h1>
+      <motion.div
+        animate={{
+          y: [0, -15, 0]
+        }}
+        transition={{
+          y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+        }}
+        className="flex relative w-full h-full right-0 sm:right-16">
 
-      <main className="testimonial-cards-wrapper">
-        <img src={Mudaris} alt="img" />
+        <motion.div initial={{
+        }} className=" absolute left-10 sm:left-1/2 z-10 card1 h-[350px] sm:h-[500px] w-[350px] sm:w-[550px] border-2 bg-black border-zinc-800 rounded-4xl flex flex-col items-center">
+          <img src={Dr} className='h-10/11 absolute' />
+          <div className="h-[90%]">
+            <div className="flex flex-col h-full justify-end items-start">
+              <h2 className='text-2xl font-light'>Enayatullah Mudaris</h2>
+              <p className='text-sm'>CEO of Mudaris Academy</p>
+            </div>
 
-        <div className="testimoinal-card">
-          <p>
-            Working with Asrnova has been an exceptional experience. Their
-            professionalism, dedication, and attention to detail are unmatched.
-            From start to finish, the team demonstrated a deep understanding of
-            our needs and delivered outstanding results. Their communication was
-            always clear, timely, and solution-driven. We are extremely happy
-            with their services and highly recommend Asrnova to anyone looking
-            for a reliable and highly professional partner.
-          </p>
-          <img src={Testimonial} alt="img" />
-          <h4 className="azonix text-[#00F5A0]">CEO — Mudaris Academy</h4>
+          </div>
+        </motion.div>
+        <div className="w-full flex pointer-events-none justify-center items-center h-full blur-[160px]">
+          <div className="w-[30%] h-[450px] rounded-full bg-purple-700 absolute">
+          </div>
         </div>
-      </main>
-    </section>
-  );
-};
+        <motion.div
+          initial={{ zIndex: 0 }}
+          whileHover={{ zIndex: 40, scale: 1.1 }}
+          className=" absolute bg-black !p-10 sm:!p-14 text-center top-1/4 sm:top-1/3 left-0 sm:left-1/3  card1 h-[300px] sm:h-[500px] w-[350px] sm:w-[550px] border-2 border-zinc-800 rounded-4xl flex flex-col items-center">
+          <h2 className='text-sm sm:text-2xl font-light'>Working with AsrNova has been an outstanding experience. Moiz and Hassan truly understand how to bring ideas to life with innovation and precision. Their professionalism, communication, and dedication to delivering high-quality work exceeded our expectations. We couldn't be happier with the results and look forward to working with them again!</h2>
+        </motion.div>
+      </motion.div>
+    </div >
+  )
+}
 
-export default Testimonials;
+export default Testimonials

@@ -7,7 +7,6 @@ import MeetourTeam from "./components/meetOurTeam"
 import { Navbar } from '@layout/navBar'
 import pic from '../../assets/magicpattern-87PP9Zd7MNo-unsplash.jpg'
 import { GlowingEffectDemo } from "./components/whyChoose/gloweffect"
-import { AnimatedModalDemo } from "./components/chat/model"
 import '../../global.css'
 import Testimonials from "./components/testimonials"
 const Home = () => {
@@ -21,17 +20,14 @@ const Home = () => {
       }}>
       <Navbar />
       <Hero />
-      <div className="UA ">
-        <AnimatedModalDemo />
-      </div>
       <div className="flex flex-col gap-12 bg-[#000000]  text-white">
         <Services />
+        <Testimonials />
         <WorkComponent />
         <div className="UA">
           <GlowingEffectDemo />
         </div>
         <MeetourTeam />
-        <Testimonials />
         <BookaCall />
         <Footer />
       </div>
