@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import './styles.css';
 import SwingingRobot from './swingingRobot';
 import ParallaxEffect from './textMoving';
-import { ButtoninBookaCall } from '../buttonForHero';
+import { ButtoninBookaCall } from '../../../../components/buttonForHero';
 const Hero = () => {
   return (
     <section className="heroPageMainSection sm:h-dvh flex flex-col overflow-hidden w-full m-auto gap-10 !pb-10">
