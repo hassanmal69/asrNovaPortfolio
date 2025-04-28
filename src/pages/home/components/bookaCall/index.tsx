@@ -1,4 +1,4 @@
-import { Cover } from "../ui/cover";
+import { Cover } from "../../../../components/ui/cover";
 import "./BookaCall.css";
 import FormBookacall from "./form";
 const BookaCall = () => {
