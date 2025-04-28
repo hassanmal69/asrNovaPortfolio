@@ -1,30 +1,37 @@
-import { Menu, X, Phone, Settings, Briefcase, MessageSquare } from "lucide-react";
+import {
+  Menu,
+  X,
+  Phone,
+  Settings,
+  Briefcase,
+  MessageSquare,
+} from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "@assets/logo.png";
-import ChatSystem from '../chat/index'
-import { AnimatedModalDemo } from '../chat/model.tsx'
+import ChatSystem from "../../pages/home/components/chat/index";
+import { AnimatedModalDemo } from "../../pages/home/components/chat/model.tsx";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Contact",  },
-    { name: "Service", },
-    { name: "Work", },
-    { name: "Testimonials", },
-    { name: "Chat Support"}
+    { name: "Contact" },
+    { name: "Service" },
+    { name: "Work" },
+    { name: "Testimonials" },
+    { name: "Chat Support" },
   ];
 
   // Animation variants
   const menuVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       y: -20,
       transition: {
         duration: 0.2,
-        ease: "easeInOut"
-      }
+        ease: "easeInOut",
+      },
     },
     visible: {
       opacity: 1,
@@ -33,14 +40,14 @@ export const Navbar = () => {
         duration: 0.3,
         ease: "easeInOut",
         staggerChildren: 0.1,
-        when: "beforeChildren"
-      }
-    }
+        when: "beforeChildren",
+      },
+    },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0 }
+    visible: { opacity: 1, x: 0 },
   };
 
   return (
@@ -56,11 +63,15 @@ export const Navbar = () => {
           {navItems.map((item) => (
             <a
               key={item.name}
-              href={`#${item.name.toLowerCase().replace(' ', '-')}`}
+              href={`#${item.name.toLowerCase().replace(" ", "-")}`}
               className="flex items-center !px-3 !py-2 text-sm font-medium text-white transition-colors rounded-lg hover:bg-white/20 hover:scale-105 transition-all duration-200"
             >
               <span className="ml-2">
-                {item.name === 'Chat Support' ? <AnimatedModalDemo /> : item.name}
+                {item.name === "Chat Support" ? (
+                  <AnimatedModalDemo />
+                ) : (
+                  item.name
+                )}
               </span>
             </a>
           ))}
@@ -90,21 +101,25 @@ export const Navbar = () => {
               className="absolute h-[100vh] top-full left-0 right-0 w-full flex flex-col p-4 space-y-2 bg-gray-900/95 backdrop-blur-lg border-t border-white/20 md:hidden"
             >
               <div className="flex flex-col h-[60%] justify-evenly">
-              {navItems.map((item) => (
-                <motion.a
-                  key={item.name}
-                  href={`#${item.name.toLowerCase().replace(' ', '-')}`}
-                  className="flex items-center px-4 py-3 text-sm font-medium text-white transition-colors rounded-lg hover:bg-white/20"
-                  onClick={() => setIsOpen(false)}
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <span className="ml-3">
-                    {item.name === 'Chat Support' ? <AnimatedModalDemo /> : item.name}
-                  </span>
-                </motion.a>
-              ))}
+                {navItems.map((item) => (
+                  <motion.a
+                    key={item.name}
+                    href={`#${item.name.toLowerCase().replace(" ", "-")}`}
+                    className="flex items-center px-4 py-3 text-sm font-medium text-white transition-colors rounded-lg hover:bg-white/20"
+                    onClick={() => setIsOpen(false)}
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="ml-3">
+                      {item.name === "Chat Support" ? (
+                        <AnimatedModalDemo />
+                      ) : (
+                        item.name
+                      )}
+                    </span>
+                  </motion.a>
+                ))}
               </div>
             </motion.div>
           )}
