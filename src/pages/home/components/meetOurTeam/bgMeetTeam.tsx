@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import saturn from '../../../../assets/saturn.jpg';
-import falling from '../../../../assets/falling.png'
 import './ourteam.css'
 const BgMeetTeam = () => {
     return (
@@ -19,16 +18,6 @@ const BgMeetTeam = () => {
                     }}
                 />
                 <div className="h-full w-full flex justify-center items-center relative">
-                    {/* <motion.img src={falling} className='w-[700px] z-10'
-                        animate={{
-                            rotate: 160
-                        }}
-                        transition={{
-                            duration: 10,
-                            repeat: Infinity,
-                            repeatType: "reverse",
-                            ease: "easeInOut"
-                        }} /> */}
                     <div className="absolute flex justify-center items-center w-full h-full">
                         <div className="w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] BluecircleinBG absolute rounded-full"></div>
                     </div>

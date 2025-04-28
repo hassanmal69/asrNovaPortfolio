@@ -7,10 +7,8 @@ import MeetourTeam from "./components/meetOurTeam"
 import { Navbar } from './components/navBar'
 import pic from '../../assets/magicpattern-87PP9Zd7MNo-unsplash.jpg'
 import { GlowingEffectDemo } from "./components/whyChoose/gloweffect"
-import ChatSystem from "./components/chat"
-import { AnimatedModalDemo } from "./components/chat/model"
+import Testimonials from './components/testimonials/index.tsx'
 import '../../global.css'
-import Timeline from "./components/services/component/timeline"
 const Home = () => {
   return (
     <section className=""
@@ -20,20 +18,18 @@ const Home = () => {
         backgroundSize: "220vh",
         // backgroundSize: " contain"
       }}>
-      {/* <Navbar /> */}
-      {/* <Hero /> */}
-      {/* <div className="UA ">
-        <AnimatedModalDemo />
-      </div> */}
+      <Navbar />
+      <Hero />
       <div className="flex flex-col gap-12 bg-[#000000]  text-white">
         <Services />
-        {/* <WorkComponent />
+        <WorkComponent />
+        <Testimonials/>
         <MeetourTeam />
         <div className="UA">
           <GlowingEffectDemo />
         </div>
         <BookaCall />
-        <Footer /> */}
+        <Footer />
       </div>
     </section >
   )
