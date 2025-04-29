@@ -1,9 +1,8 @@
-"use client";
 import React, { useEffect, useId, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useRef } from "react";
-import { cn } from "../../lib/utils.ts";
-import { SparklesCore } from "./sparkles.tsx";
+import { cn } from "@lib/utils";
+import { SparklesCore } from "./sparkles";
 
 export const Cover = ({
   children,
@@ -221,7 +220,7 @@ export const CircleIcon = ({
     <div
       className={cn(
         `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-neutral-600 dark:bg-white opacity-20 group-hover/cover:bg-white`,
-        className
+        className , delay
       )}
     ></div>
   );

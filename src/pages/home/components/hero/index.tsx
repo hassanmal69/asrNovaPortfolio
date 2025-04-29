@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import './styles.css';
 import SwingingRobot from './swingingRobot';
 import ParallaxEffect from './textMoving';
-import { ButtoninBookaCall } from '../../../../components/buttonForHero';
-const Hero = ({handleScrollToBook}) => {
+import { ButtoninBookaCall } from '@components/buttonForHero';
+const Hero = ({handleScrollToBook}:any) => {
   return (
     <section className="heroPageMainSection sm:h-dvh flex flex-col overflow-hidden w-full m-auto gap-10 !pb-10">
       <div className="contentInHeroPage flex flex-col gap-10 w-full h-full justify-center items-center ">

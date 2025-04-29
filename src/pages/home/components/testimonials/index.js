@@ -1,0 +1,11 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { motion } from "framer-motion";
+import Dr from '@assets/testimonial.svg';
+const Testimonials = () => {
+    return (_jsxs("div", { className: 'w-full relative h-[100vh] sm:h-[140vh] !overflow-hidden', id: 'testimonials', children: [_jsx("h1", { className: 'text-4xl sm:text-6xl !mb-20 text-center', children: "Our Testimonials" }), _jsxs(motion.div, { animate: {
+                    y: [0, -15, 0]
+                }, transition: {
+                    y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+                }, className: "flex relative w-full h-full right-0 sm:right-16", children: [_jsxs(motion.div, { initial: {}, className: " absolute left-10 sm:left-1/2 z-10 card1 h-[350px] sm:h-[500px] w-[350px] sm:w-[550px] border-2 bg-black border-zinc-800 rounded-4xl flex flex-col items-center", children: [_jsx("img", { src: Dr, className: 'h-10/11 absolute' }), _jsx("div", { className: "h-[90%]", children: _jsxs("div", { className: "flex flex-col h-full justify-end items-start", children: [_jsx("h2", { className: 'text-2xl font-light', children: "Enayatullah Mudaris" }), _jsx("p", { className: 'text-sm', children: "CEO of Mudaris Academy" })] }) })] }), _jsx("div", { className: "w-full flex pointer-events-none justify-center items-center h-full blur-[160px]", children: _jsx("div", { className: "w-[30%] h-[450px] rounded-full bg-purple-700 absolute" }) }), _jsx(motion.div, { initial: { zIndex: 0 }, whileHover: { zIndex: 40, scale: 1.1 }, className: " absolute bg-black !p-10 sm:!p-14 text-center top-1/4 sm:top-1/3 left-0 sm:left-1/3  card1 h-[300px] sm:h-[500px] w-[350px] sm:w-[550px] border-2 border-zinc-800 rounded-4xl flex flex-col items-center", children: _jsx("h2", { className: 'text-sm sm:text-2xl font-light', children: "Working with AsrNova has been an outstanding experience. Moiz and Hassan truly understand how to bring ideas to life with innovation and precision. Their professionalism, communication, and dedication to delivering high-quality work exceeded our expectations. We couldn't be happier with the results and look forward to working with them again!" }) })] })] }));
+};
+export default Testimonials;

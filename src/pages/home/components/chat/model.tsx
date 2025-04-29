@@ -4,33 +4,37 @@ import {
   ModalContent,
   ModalTrigger,
 } from "./animated-modal";
-import ChatSystem from './index.tsx'
 import { motion } from "motion/react";
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { stringSimilarity } from "string-similarity-js";
 import FaqData from '../../../../data/chatdata.json'
-import chatMan from '../../../../assets/chatman.png'
+import chatMan from '@assets/chatman.png'
 import './model.css'
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 export function AnimatedModalDemo() {
   const [msg, setMsg] = useState("")
-  const [similar, setSimilar] = useState("")
+  const [similar, setSimilar] = useState<FaqItem | null>(null);
   const [ask, setAsk] = useState(false)
   const handleCheck = () => {
     let bestScore = 0;
-    let bestMatch = null;
-    setAsk(true)
+    let bestMatch: FaqItem | null = null; // Explicitly define this as FaqItem | null
+    setAsk(true);
+  
     FaqData.faqs.forEach((f) => {
-      const similarity = stringSimilarity(msg.toLowerCase(), f.question.toLowerCase())
+      const similarity = stringSimilarity(msg.toLowerCase(), f.question.toLowerCase());
       if (similarity > bestScore) {
         bestScore = similarity;
-        bestMatch = {
-          ...f,
-        };
+        bestMatch = f; // bestMatch is now of type FaqItem
       }
     });
-
-    setSimilar(bestMatch);
-  }
+  
+    setSimilar(bestMatch); // This now works correctly with the state type FaqItem | null
+  };
+  
   return (
     <div className="py-40 flex items-center justify-center">
       <Modal>
