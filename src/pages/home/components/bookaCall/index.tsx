@@ -1,5 +1,5 @@
+import { Cover } from "@components/ui/cover";
 import { forwardRef } from "react";
-import { Cover } from "../../../../components/ui/cover";
 import "./BookaCall.css";
 import FormBookacall from "./form";
 const BookaCall = forwardRef<HTMLElement>((_, ref) => {

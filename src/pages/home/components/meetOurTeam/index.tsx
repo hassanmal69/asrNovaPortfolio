@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import BgMeetTeam from "./bgMeetTeam";
-import Hassan from "../../../../assets/hassanNFT.webp";
-import Moiz from "../../../../assets/moizNft.webp";
-import Point from "../../../../assets/monkeypointin.webp";
-import Broken from "../../../../assets/12122.webp";
-import catPoint from "../../../../assets/catpoint.png";
+import Hassan from "@assets/hassanNFT.webp";
+import Moiz from "@assets/moizNft.webp";
+import Point from "@assets/monkeypointin.webp";
+import Broken from "@assets/12122.webp";
+import catPoint from "@assets/catpoint.png";
 import { Heading } from "@components/heading";
 import { useState } from "react";
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Dr from '../../../../assets/dr.png'
+import Dr from '@assets/testimonial.svg'
 const Testimonials = () => {
   return (
     <div className='w-full relative h-[100vh] sm:h-[140vh] !overflow-hidden' id='testimonials'>
