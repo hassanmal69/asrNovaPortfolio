@@ -92,7 +92,7 @@ const Services = () => {
               return (
                 <motion.span
                   key={index}
-                  className="inline-block text-sm sm:text-2xl font-extrabold "
+                  className="inline-block text-sm sm:text-2xl "
                   style={{ display: "inline-block", whiteSpace: "nowrap" }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} // Trigger only when in view
