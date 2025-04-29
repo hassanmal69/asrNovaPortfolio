@@ -1,3 +1,4 @@
+import {useRef} from "react"
 import Hero from "./components/hero"
 import Services from "./components/services"
 import WorkComponent from "./components/work"
@@ -10,6 +11,12 @@ import { GlowingEffectDemo } from "./components/whyChoose/gloweffect"
 import '../../global.css'
 import Testimonials from "./components/testimonials"
 const Home = () => {
+  const bookRef = useRef<HTMLElement | null>(null);
+
+  const handleScrollToBook = () => {
+    bookRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className=""
       style={{
@@ -19,7 +26,7 @@ const Home = () => {
         // backgroundSize: " contain"
       }}>
       <Navbar />
-      <Hero />
+      <Hero handleScrollToBook={handleScrollToBook} />
       <div className="flex flex-col gap-12 bg-[#000000]  text-white">
         <Services />
         <Testimonials />
@@ -28,7 +35,7 @@ const Home = () => {
           <GlowingEffectDemo />
         </div>
         <MeetourTeam />
-        <BookaCall />
+        <BookaCall ref={bookRef} />
         <Footer />
       </div>
     </section >

@@ -3,7 +3,7 @@ import './styles.css';
 import SwingingRobot from './swingingRobot';
 import ParallaxEffect from './textMoving';
 import { ButtoninBookaCall } from '../../../../components/buttonForHero';
-const Hero = () => {
+const Hero = ({handleScrollToBook}) => {
   return (
     <section className="heroPageMainSection sm:h-dvh flex flex-col overflow-hidden w-full m-auto gap-10 !pb-10">
       <div className="contentInHeroPage flex flex-col gap-10 w-full h-full justify-center items-center ">
@@ -16,7 +16,7 @@ const Hero = () => {
             transition={{ duration: 1, ease: 'easeOut' }}
           >
             <motion.h1
-              className="ethnocentric text-center sm:text-left text-2xl sm:text-4xl font-bold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight "
+              className="ethnocentric text-center sm:text-left text-2xl sm:text-4xl max-sm:text-[18px] font-bold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight "
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
@@ -24,7 +24,7 @@ const Hero = () => {
               Websites Fade, <br /> Stories Last Forever
             </motion.h1>
             <motion.p
-              className="orbitron text-xl text-[#000000] leading-relaxed w-[80%] sm:w-full "
+              className="orbitron text-xl text-[#000000] leading-relaxed w-[80%] max-sm:text-[14px] max-sm:text-center sm:w-full "
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -35,7 +35,7 @@ const Hero = () => {
               create digital experiences that make your brand impossible to
               ignore.
             </motion.p>
-            <ButtoninBookaCall text="Get in touch"/>
+            <ButtoninBookaCall text="Get in touch" onClick={handleScrollToBook}/>
           </motion.div>
 
           <motion.div 
