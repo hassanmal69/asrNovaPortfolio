@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { stringSimilarity } from "string-similarity-js";
 import FaqData from '../../../../data/chatdata.json'
-import chatMan from '../../../../assets/chatman.png'
+import chatMan from '@assets/chatman.png'
+interface FaqItem {
+    question: string;
+    answer: string;
+  }
+  
 const ChatSystem = () => {
     const [msg, setMsg] = useState("")
-    const [similar, setSimilar] = useState(null)
+    const [similar, setSimilar] = useState<FaqItem | null>(null);
     const [show, setShow] = useState(false)
     const handleCheck = () => {
         let bestScore = 0;

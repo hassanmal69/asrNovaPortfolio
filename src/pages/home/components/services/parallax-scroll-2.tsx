@@ -2,23 +2,28 @@ import { useScroll, useTransform } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@lib/utils";
 import { useEffect, useState } from "react";
-import { ThemeMode } from "@tsparticles/engine";
 import Timeline from "./component/timeline";
+type ServicePayload = {
+  title: string;
+  description: string;
+  img: string;
+};
+
 export const ParallaxScrollSecond = ({
   payload,
   className,
   containerRefrence,
 }: {
-  payload?: string | any;
+  payload: ServicePayload[];
   className?: string;
-  containerRefrence: React.RefObject<HTMLElement>;
+  containerRefrence: React.RefObject<HTMLElement | null>;
 }) => {
   const { scrollYProgress } = useScroll({
     container: containerRefrence,
     offset: ["start start", "end start"],
   });
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768);
 
   useEffect(() => {
     const handleResize = () => {

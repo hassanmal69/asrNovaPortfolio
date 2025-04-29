@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ButtoninBookaCall } from "../../../../../components/buttonForHero";
+import { ButtoninBookaCall } from "@components/buttonForHero";
 import '../BookaCall.css';
 
 interface FormFields {

@@ -4,24 +4,23 @@ import astronoutImg from "@assets/astranout.png";
 import pointinAstraunaut from "@assets/pointing.png";
 import MoonComponent from "./animatedmoon";
 import { useState, useRef, useEffect } from "react";
-import spaceShip from '@assets/spaceship-.png'
+import spaceShip from "@assets/spaceship-.png";
 import { Heading } from "@components/heading";
 const WorkComponent = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isCursorVisible, setCursorVisible] = useState(false);
-  const [isMobile, setisMobile] = useState(window.innerWidth < 670)
+  const [isMobile, setisMobile] = useState(window.innerWidth < 670);
   useEffect(() => {
-    const handleResize = () => setisMobile(window.innerWidth < 670)
-    window.addEventListener("resize", handleResize)
+    const handleResize = () => setisMobile(window.innerWidth < 670);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
-
-  const cursorRef = useRef(null);
+  const cursorRef = useRef<HTMLDivElement | null>(null);
   const containerRef = useRef(null);
-  const handleMouseMove = (e:any) => {
+  const handleMouseMove = (e: React.MouseEvent) => {
     if (cursorRef.current) {
       cursorRef.current.style.left = `${e.clientX}px`;
       cursorRef.current.style.top = `${e.clientY}px`;
@@ -29,23 +28,30 @@ const WorkComponent = () => {
   };
   return (
     <motion.section
-    id="work"
+      id="work"
       onMouseMove={handleMouseMove}
       ref={containerRef}
       onMouseEnter={() => setCursorVisible(true)}
       onMouseLeave={() => setCursorVisible(false)}
-      className="mainSectionMainWork w-full sm:h-[130vh] overflow-hidden justify-start cursor-none">
-      {isCursorVisible && <div className="customCursor" ref={cursorRef}> <img src={spaceShip} className="w-full h-full" /></div>}
+      className="mainSectionMainWork w-full sm:h-[130vh] overflow-hidden justify-start cursor-none"
+    >
+      {isCursorVisible && (
+        <div className="customCursor" ref={cursorRef}>
+          {" "}
+          <img src={spaceShip} className="w-full h-full" />
+        </div>
+      )}
       <div className="blackscreen w-full h-full absolute z-4 pointer-events-none"></div>
       <div className="textContentinwork !mb-30 flex flex-col gap-3 relative z-50">
-      <Heading title="
+        <Heading
+          title="
           Our Work
-      " />
+      "
+        />
         <p className="text-base sm:text-2xl text-gray-500 font-light text-center px-4">
           Empowering businesses with innovative digital solutions – explore our
           projects that blend creativity, technology, and efficiency.
         </p>
-
       </div>
 
       <div className="flex flex-col sm:flex-row w-[80%] gap-10 relative z-10">
@@ -53,10 +59,23 @@ const WorkComponent = () => {
           project.img ? (
             <motion.img
               key={index}
-              src={isMobile ? project.img : hoveredIndex !== null ? project.point : project.img}
+              src={
+                isMobile
+                  ? project.img
+                  : hoveredIndex !== null
+                  ? project.point
+                  : project.img
+              }
               alt="Project Image"
-              className={`sm:w-1/3 h-[450px] imageinworkContainerAstranout ${isMobile ? project.img : hoveredIndex === 0 ? "point-left w-[27%] !h-[380px]" : hoveredIndex === 2 ? "point-right w-[27%] !h-[380px]" : ""
-                }`}
+              className={`sm:w-1/3 h-[450px] imageinworkContainerAstranout ${
+                isMobile
+                  ? project.img
+                  : hoveredIndex === 0
+                  ? "point-left w-[27%] !h-[380px]"
+                  : hoveredIndex === 2
+                  ? "point-right w-[27%] !h-[380px]"
+                  : ""
+              }`}
               animate={{
                 y: [0, -25, 0],
                 opacity: [0.5, 1],

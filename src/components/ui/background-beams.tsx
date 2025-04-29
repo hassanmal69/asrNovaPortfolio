@@ -1,4 +1,4 @@
-import { cn } from "../../lib/utils";
+import { cn } from "@lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import React, { useRef, useState, useEffect } from "react";
 
@@ -98,8 +98,8 @@ export const BackgroundBeams = ({
 const CollisionMechanism = React.forwardRef<
   HTMLDivElement,
   {
-    containerRef: React.RefObject<HTMLDivElement>;
-    parentRef: React.RefObject<HTMLDivElement>;
+    containerRef: React.RefObject<HTMLDivElement | null>;
+    parentRef: React.RefObject<HTMLDivElement | null>;
     beamOptions?: {
       initialX?: number;
       translateX?: number;
@@ -112,7 +112,7 @@ const CollisionMechanism = React.forwardRef<
       repeatDelay?: number;
     };
   }
->(({ parentRef, containerRef, beamOptions = {} }, ref) => {
+>(({ parentRef, containerRef, beamOptions = {} }) => {
   const beamRef = useRef<HTMLDivElement>(null);
   const [collision, setCollision] = useState<{
     detected: boolean;

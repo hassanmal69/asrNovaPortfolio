@@ -9,7 +9,6 @@ import {
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "@assets/logo.png";
-import ChatSystem from "../../pages/home/components/chat/index";
 import { AnimatedModalDemo } from "../../pages/home/components/chat/model.tsx";
 
 export const Navbar = () => {

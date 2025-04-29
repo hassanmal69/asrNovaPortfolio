@@ -5,7 +5,7 @@ import WorkComponent from "./components/work"
 import BookaCall from "./components/bookaCall"
 import Footer from "@layout/footer"
 import MeetourTeam from "./components/meetOurTeam"
-import { Navbar } from '@layout/navBar'
+import { Navbar } from "@layout/navbar"
 import pic from '../../assets/magicpattern-87PP9Zd7MNo-unsplash.jpg'
 import { GlowingEffectDemo } from "./components/whyChoose/gloweffect"
 import '../../global.css'
