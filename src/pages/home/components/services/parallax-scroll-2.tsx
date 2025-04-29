@@ -67,8 +67,8 @@ export const ParallaxScrollSecond = ({
     isMobile ? [0, 0] : [0, 20]
   );
 
-  const third = Math.ceil(payload.length / 4);
-  const firstPart = payload.slice(0, third + 1);
+  const third = Math.ceil(payload.length / 5);
+  const firstPart = payload.slice(0, third + 2);
   const secondPart = payload.slice(third, 3 * third);
   const thirdPart = payload.slice(2 * third);
 

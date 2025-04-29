@@ -16,10 +16,10 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Contact" },
     { name: "Service" },
     { name: "Work" },
     { name: "Testimonials" },
+    { name: "Contact" },
     { name: "Chat Support" },
   ];
 

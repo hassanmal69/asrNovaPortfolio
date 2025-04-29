@@ -85,7 +85,7 @@ const Services = () => {
 
           <motion.p
             ref={textRef}
-            className="absolute text-white px-4 py-2 flex gap-1 sm:gap-2 w-[90%] sm:w-[50%] bg-opacity-50 rounded-md flex-wrap">
+            className="absolute text-white px-4 py-2 flex gap-1 sm:gap-2 w-full h-full sm:w-[50%] bg-opacity-50 rounded-md flex-wrap">
             {servicesContent.intro.split(" ").map((word, index) => {
               const delay = index * 0.05; // Stagger effect
 
@@ -173,6 +173,8 @@ const servicesContent = {
           "Design isn’t just how it looks—it’s how it works. We craft **pixel-perfect interfaces, seamless flows, and user-first experiences that make products feel intuitive, thoughtful, and kind of addictive.",
         img: Design,
       },
+  
+      
     ],
     
   closing:
