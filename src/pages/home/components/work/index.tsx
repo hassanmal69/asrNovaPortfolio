@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import "./work.css";
-import astronoutImg from "../../../../assets/astranout.png";
-import pointinAstraunaut from "../../../../assets/pointing.png";
+import astronoutImg from "@assets/astranout.png";
+import pointinAstraunaut from "@assets/pointing.png";
 import MoonComponent from "./animatedmoon";
 import { useState, useRef, useEffect } from "react";
-import spaceShip from '../../../../assets/spaceship-.png'
-import { Heading } from "../../../../components/heading";
+import spaceShip from '@assets/spaceship-.png'
+import { Heading } from "@components/heading";
 const WorkComponent = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isCursorVisible, setCursorVisible] = useState(false);
