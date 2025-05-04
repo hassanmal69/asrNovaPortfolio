@@ -100,30 +100,31 @@ export const Navbar = () => {
               className="absolute h-[100vh] top-full left-0 right-0 w-full flex flex-col p-4 space-y-2 bg-gray-900/95 backdrop-blur-lg border-t border-white/20 md:hidden"
             >
               <div className="flex flex-col h-[60%] justify-evenly">
-                {navItems.map((item) => (
-                  <motion.a
-                    key={item.name}
-                    href={`#${item.name.toLowerCase().replace(" ", "-")}`}
-                    className="flex items-center px-4 py-3 text-sm font-medium text-white transition-colors rounded-lg hover:bg-white/20"
-                    onClick={() => setIsOpen(false)}
-                    variants={itemVariants}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <span className="ml-3">
-                      {item.name === "Chat Support" ? (
-                        <AnimatedModalDemo />
-                      ) : (
-                        item.name
-                      )}
-                    </span>
-                  </motion.a>
-                ))}
+                {navItems.map((item) =>
+                  item.name === "Chat Support" ? (
+                    <div key={item.name} onClick={() => setIsOpen(true)}>
+                      <AnimatedModalDemo />
+                    </div>
+                  ) : (
+                    <motion.a
+                      key={item.name}
+                      href={`#${item.name.toLowerCase().replace(" ", "-")}`}
+                      className="flex items-center px-4 py-3 text-sm font-medium text-white transition-colors rounded-lg hover:bg-white/20"
+                      onClick={() => setIsOpen(false)}
+                      variants={itemVariants}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <span className="ml-3">{item.name}</span>
+                    </motion.a>
+                  )
+                )}
+
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
-    </header>
+    </header >
   );
 };

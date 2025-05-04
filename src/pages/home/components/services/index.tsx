@@ -108,10 +108,9 @@ const Services = () => {
             className="w-full h-full relative rounded-3xl imginservice"
             src={Image}
           />
-
           <motion.p
             ref={textRef}
-            className="absolute text-white px-4 py-2 flex gap-1 sm:gap-2 w-full h-full sm:w-[50%] bg-opacity-50 rounded-md flex-wrap"
+            className="absolute text-white h-[60%] px-4 py-2 flex gap-1 sm:gap-2 w-full  sm:w-[50%] bg-opacity-50 rounded-md flex-wrap"
           >
             {servicesContent.intro.split(" ").map((word, index) => {
               const delay = index * 0.05; // Stagger effect
@@ -119,7 +118,7 @@ const Services = () => {
               return (
                 <motion.span
                   key={index}
-                  className="inline-block text-sm sm:text-2xl "
+                  className="inline-block text-sm sm:text-2xl font-extrabold"
                   style={{ display: "inline-block", whiteSpace: "nowrap" }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={

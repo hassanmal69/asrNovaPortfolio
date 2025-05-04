@@ -1,132 +1,729 @@
 {
   "faqs": [
     {
-      "question": "HEY HOW ARE YOU",
-      "answer": "AlHamdulillah!"
+      "group": "General",
+      "question": "Hey, how are you?",
+      "answer": "I'm doing great, AlHamdulillah! Thank you for asking. How can I assist you today at Asrnova? 🚀"
     },
     {
+      "group": "General",
       "question": "What services does Asrnova offer?",
-      "answer": "At Asrnova, we build real software—scalable, high‑performance solutions. Our services include Web Development, App Development, SaaS Development, AI & Machine Learning, AR & VR Solutions, Web3 & Blockchain, and Automation & Custom Integrations."
+      "answer": "At Asrnova, we bring ideas to life! 🚀 We offer Web Development, App Development, SaaS Solutions, AI/ML Projects, AR/VR Experiences, Web3 & Blockchain Solutions, and Automation & Integrations."
     },
     {
-      "question": "What is your web development process?",
-      "answer": "Our web development process starts with requirements gathering and wireframing, moves on to UI/UX design, then to front‑end and back‑end implementation, followed by testing and QA, and concludes with deployment and post‑launch support."
+      "group": "Team",
+      "question": "Who is the CEO of Asrnova?",
+      "answer": "Our CEO is Abdul Moiz — the visionary leading Asrnova! 🌟 He's all about pushing boundaries, exploring new ideas, and helping clients succeed through innovative solutions."
     },
     {
-      "question": "Which technologies do you use for web development?",
-      "answer": "We specialize in React, Vue, Angular for front‑end; Node.js, Django, Ruby on Rails for back‑end; and databases like PostgreSQL, MongoDB, and MySQL. We also use Tailwind CSS and Material‑UI for styling."
+      "group": "Team",
+      "question": "Who is the CTO of Asrnova?",
+      "answer": "Hassan Tahir is our CTO — the technical wizard behind all the magic! ✨ He ensures our products are cutting-edge, efficient, and ready to scale."
     },
     {
-      "question": "Can you build responsive websites?",
-      "answer": "Absolutely. All our websites are fully responsive and optimized for mobile, tablet, and desktop using modern CSS techniques and responsive frameworks."
+      "group": "Web Development",
+      "question": "What type of websites does Asrnova build?",
+      "answer": "We build everything from business websites, e-commerce stores, landing pages, to custom portals and web apps — fully optimized for speed, SEO, and responsiveness!"
     },
     {
-      "question": "Do you offer e-commerce web development?",
-      "answer": "Yes—we build custom e‑commerce platforms and integrate with Shopify, WooCommerce, Magento, or build headless commerce solutions tailored to your needs."
+      "group": "Web Development",
+      "question": "Can you create mobile responsive websites?",
+      "answer": "Absolutely! 📱 All websites we build are fully mobile-responsive, ensuring a great user experience on all devices."
     },
     {
-      "question": "How long does a typical web development project take?",
-      "answer": "Timeline varies by scope, but a standard brochure‑style website takes 4–6 weeks. More complex web apps or platforms can take 3–6 months depending on requirements."
+      "group": "Web Development",
+      "question": "What technologies do you use for web development?",
+      "answer": "We use React.js, Next.js, Node.js, Express, Tailwind CSS, Material-UI, and other modern stacks depending on your project needs!"
     },
     {
-      "question": "What does your app development service include?",
-      "answer": "We develop iOS, Android, and cross‑platform apps using Swift, Kotlin, React Native, and Flutter. Our service covers UI/UX design, API integration, testing, and deployment to App Store and Google Play."
+      "group": "Web Development",
+      "question": "Can Asrnova redesign my existing website?",
+      "answer": "Yes! ✨ We can give your current website a full makeover — better UI/UX, performance optimization, and modern designs."
     },
     {
-      "question": "Can you integrate mobile apps with existing systems?",
-      "answer": "Yes. We connect mobile apps to your existing CMS, CRM, or custom back‑end systems via secure REST or GraphQL APIs."
+      "group": "Web Development",
+      "question": "How long does it take to build a website?",
+      "answer": "It depends on the project size — typically between 2 to 8 weeks. We also offer faster delivery if needed!"
     },
     {
-      "question": "What is SaaS development and do you offer it?",
-      "answer": "SaaS (Software‑as‑a‑Service) is cloud‑hosted software accessed via subscription. We build end‑to‑end SaaS platforms—handling multi‑tenant architecture, subscription billing, security, and scalability."
+      "group": "App Development",
+      "question": "Do you develop both Android and iOS apps?",
+      "answer": "Yes! 📱 We develop native and cross-platform apps for Android and iOS, ensuring the best performance on both platforms."
     },
     {
-      "question": "Which cloud platforms do you use for SaaS?",
-      "answer": "We deploy SaaS solutions on AWS, Azure, and Google Cloud, using Docker and Kubernetes for containerization and orchestration."
+      "group": "App Development",
+      "question": "Can you help launch my app on Play Store and App Store?",
+      "answer": "Of course! 🚀 We help you with the full app deployment and launch process, making it easy and stress-free."
     },
     {
-      "question": "What AI and Machine Learning services do you provide?",
-      "answer": "We build AI‑powered chatbots, predictive analytics models, computer vision systems, and recommendation engines. We use TensorFlow, PyTorch, and scikit‑learn for model development."
+      "group": "App Development",
+      "question": "What tech stack do you use for app development?",
+      "answer": "We primarily use React Native, Flutter, Kotlin, Swift, and backend technologies like Node.js and Firebase."
     },
     {
-      "question": "Can you integrate AI into our existing products?",
-      "answer": "Yes, we can add AI modules—such as NLP chatbots or image‑recognition features—to your existing applications via APIs or microservices."
+      "group": "App Development",
+      "question": "Do you offer app maintenance after launch?",
+      "answer": "Absolutely! 💬 We offer maintenance packages to ensure your app stays updated, secure, and compatible with new devices."
     },
     {
-      "question": "What are AR & VR solutions?",
-      "answer": "AR (Augmented Reality) and VR (Virtual Reality) solutions blend digital content with the real world (AR) or create fully immersive environments (VR). We develop apps for education, retail, real estate, and gaming."
+      "group": "SaaS Development",
+      "question": "Can Asrnova build a custom SaaS platform for me?",
+      "answer": "Yes! 💼 We specialize in building powerful, scalable SaaS platforms tailored exactly to your business model and growth plans."
     },
     {
-      "question": "Which frameworks do you use for AR/VR?",
-      "answer": "We use Unity3D, Unreal Engine, WebXR, and ARKit/ARCore to build immersive experiences on mobile and web."
+      "group": "SaaS Development",
+      "question": "How secure are the SaaS products you build?",
+      "answer": "Security is our top priority 🔒 — we implement encryption, secure APIs, and regular security audits to keep your platform and user data safe."
     },
     {
-      "question": "What is Web3 and Blockchain development?",
-      "answer": "Web3 refers to decentralized web technologies. We build NFT marketplaces, DeFi platforms, smart contracts, and DApps using Ethereum, Solidity, Polkadot, and IPFS."
+      "group": "SaaS Development",
+      "question": "Can you help with multi-tenant SaaS architecture?",
+      "answer": "Definitely! 🛠️ We build multi-tenant SaaS apps that efficiently serve multiple customers under a single infrastructure, with proper data isolation."
     },
     {
-      "question": "Can you audit smart contracts?",
-      "answer": "Yes, we conduct smart contract audits, vulnerability assessments, and gas‑optimization for your Ethereum or Binance Smart Chain contracts."
+      "group": "AI and Machine Learning",
+      "question": "Do you offer AI-powered solutions?",
+      "answer": "Yes! 🤖 From AI chatbots to recommendation systems and predictive analytics, we create AI/ML-powered products that drive smarter decisions."
     },
     {
-      "question": "What custom automation solutions do you offer?",
-      "answer": "We automate workflows by integrating CRMs, ERPs, email services, and third‑party APIs. We can build custom bots or use platforms like Zapier and Integromat."
+      "group": "AI and Machine Learning",
+      "question": "Can you integrate AI into my existing app?",
+      "answer": "Of course! 💬 We can integrate AI features like chatbots, personalization engines, and intelligent search into your current app or website."
     },
     {
-      "question": "Do you provide API development and integrations?",
-      "answer": "Absolutely. We design and build RESTful and GraphQL APIs, and integrate with payment gateways, social media, analytics, and other services."
+      "group": "AI and Machine Learning",
+      "question": "Which AI technologies does Asrnova use?",
+      "answer": "We use TensorFlow, PyTorch, OpenAI, custom Machine Learning models, and AI API integrations depending on the project needs."
     },
     {
-      "question": "What is your pricing model?",
-      "answer": "We offer fixed‑price quotes for well‑defined scopes and time‑and‑materials for more flexible projects. Please contact us for a detailed estimate."
+      "group": "AR and VR",
+      "question": "Does Asrnova build AR or VR experiences?",
+      "answer": "Yes! 🕶️ We create immersive AR and VR experiences for education, real estate, gaming, training, and marketing purposes."
     },
     {
-      "question": "How do I get a quote for my project?",
-      "answer": "Fill out our contact form or email us at contact@asrnova.com with your requirements. We’ll set up a discovery call and send you a detailed proposal."
+      "group": "Web3 and Blockchain",
+      "question": "Can you build NFT platforms or DApps?",
+      "answer": "Yes! 🔗 We specialize in blockchain development — building NFT marketplaces, decentralized apps (DApps), and Web3 integrations."
     },
     {
+      "group": "Web3 and Blockchain",
+      "question": "Which blockchains do you work with?",
+      "answer": "We work with Ethereum, Polygon, Solana, Binance Smart Chain, and more depending on your project needs!"
+    },
+    {
+      "group": "Automation and Integrations",
+      "question": "Do you build custom automations?",
+      "answer": "Absolutely! ⚙️ We create powerful automations for CRMs, e-commerce, marketing platforms, and more using tools like Zapier, Integromat, or custom APIs."
+    },
+    {
+      "group": "Automation and Integrations",
+      "question": "Can you integrate multiple third-party APIs?",
+      "answer": "Yes! 🔌 We can seamlessly integrate payment gateways, SMS providers, AI APIs, CRM systems, and much more."
+    },
+    {
+      "group": "Pricing and Payment",
+      "question": "How does pricing work at Asrnova?",
+      "answer": "We offer project-based pricing, milestone-based payments, or monthly retainers depending on your project's scope. We’re always transparent — no hidden fees!"
+    },
+    {
+      "group": "Working with Asrnova",
+      "question": "How do I get started with Asrnova?",
+      "answer": "Super simple! 🎉 Just send us a message with your idea, and we’ll schedule a quick discovery call to understand your vision and guide you forward."
+    },
+    {
+      "group": "Working with Asrnova",
+      "question": "Can I schedule a call with your team?",
+      "answer": "Absolutely! 📅 We love connecting with potential clients. Just drop us your availability and we'll set it up!"
+    },
+    {
+      "group": "Working with Asrnova",
+      "question": "Do you work with international clients?",
+      "answer": "Yes, 100%! 🌍 We’ve worked with amazing clients from the US, UK, UAE, Canada, and more."
+    },
+    {
+      "group": "Working with Asrnova",
+      "question": "Do you offer ongoing support after project delivery?",
+      "answer": "Of course! 💡 We offer post-launch support, maintenance plans, and updates so you’re never left hanging."
+    },
+    {
+      "group": "Working with Asrnova",
+      "question": "What makes Asrnova different?",
+      "answer": "We're not just coders — we’re product thinkers 💭. With strong leadership from Abdul Moiz (CEO) and Hassan Tahir (CTO), we deeply care about your business success and user experience!"
+    },
+    {
+      "group": "Project Process",
+      "question": "What does your typical project process look like?",
+      "answer": "We follow a simple process: 🧠 Discovery → 🛠️ Design → 🚀 Development → ✅ Testing → 🎉 Launch → 🔧 Post-launch Support."
+    },
+    {
+      "group": "Project Process",
+      "question": "Can I see progress during development?",
+      "answer": "Yes! We share regular updates, milestones, and live previews so you're always in the loop. 🔄"
+    },
+    {
+      "group": "Project Process",
+      "question": "What if I want changes during development?",
+      "answer": "No worries! 💬 We always keep room for feedback and revisions. Your satisfaction is the goal."
+    },
+    {
+      "group": "Project Process",
+      "question": "Do you offer design before development?",
+      "answer": "Yes! 🎨 We design high-fidelity UI/UX mockups before starting the build to ensure alignment."
+    },
+    {
+      "group": "Project Process",
+      "question": "How do you handle project delays?",
+      "answer": "We communicate transparently! 📢 If something causes a delay, you’ll know the why, the how, and the new timeline. We value honesty."
+    },
+    {
+      "group": "Custom Solutions",
+      "question": "Can you build a platform like Uber, Airbnb, etc.?",
+      "answer": "Yes! 🧩 We build complex, scalable platforms inspired by top startups. Let’s talk about your idea!"
+    },
+    {
+      "group": "Custom Solutions",
+      "question": "Can you replicate or clone an existing app?",
+      "answer": "Yes — but ethically! 🛡️ We can build similar platforms with your own branding and unique features."
+    },
+    {
+      "group": "Custom Solutions",
+      "question": "Can you help me turn my startup idea into a product?",
+      "answer": "That’s our sweet spot! 💼 From MVP to full-scale product — we've helped many founders do exactly that."
+    },
+    {
+      "group": "Design",
+      "question": "Do you offer UI/UX design services?",
+      "answer": "Absolutely! ✨ We craft clean, intuitive, modern designs that users love. Tools like Figma and Adobe XD are our go-tos."
+    },
+    {
+      "group": "Design",
+      "question": "Can you follow my existing brand style?",
+      "answer": "Yes! 🎯 We’re happy to follow your brand guidelines, colors, typography, and tone to keep everything consistent."
+    },
+    {
+      "group": "Hosting & Deployment",
+      "question": "Do you provide hosting services?",
+      "answer": "We guide you through it! 🌐 While we don’t host directly, we set everything up on platforms like Vercel, Netlify, AWS, Firebase, etc."
+    },
+    {
+      "group": "Hosting & Deployment",
+      "question": "Will my site or app be fast and SEO friendly?",
+      "answer": "Absolutely! ⚡ Speed and SEO are part of our checklist before anything goes live."
+    },
+    {
+      "group": "Hosting & Deployment",
+      "question": "Can you help with domain and email setup?",
+      "answer": "Yes! 🌍 We help you register domains, connect them, and set up professional email using tools like Zoho or Google Workspace."
+    },
+    {
+      "group": "Tech Stack",
+      "question": "Do you use Next.js in your projects?",
+      "answer": "Yes — a lot! 💻 Next.js is one of our favorite frameworks for fast, scalable web apps."
+    },
+    {
+      "group": "Tech Stack",
+      "question": "What CSS frameworks do you use?",
+      "answer": "Tailwind CSS is our go-to! 🎨 It lets us move fast with clean, customizable UI. We also use MUI and SCSS when needed."
+    },
+    {
+      "group": "Tech Stack",
+      "question": "Do you use TypeScript?",
+      "answer": "Yes! 🧠 TypeScript helps us write safer, more scalable code — especially in big SaaS apps and startups."
+    },
+    {
+      "group": "AI and ML",
+      "question": "Can you build a chatbot using AI?",
+      "answer": "Definitely! 🤖 We’ve built custom chatbots powered by OpenAI and Dialogflow for support, sales, and automation."
+    },
+    {
+      "group": "AI and ML",
+      "question": "Do you offer NLP and data analysis tools?",
+      "answer": "Yes! 📊 We can create custom natural language processing tools, analytics dashboards, and prediction engines."
+    },
+    {
+      "group": "E-commerce",
+      "question": "Can you build my e-commerce store?",
+      "answer": "Absolutely! 🛒 Whether it's Shopify, WooCommerce, or a custom React/Next.js store — we've got you covered."
+    },
+    {
+      "group": "E-commerce",
+      "question": "Will my store work with payment gateways?",
+      "answer": "Of course! 💳 We integrate Stripe, PayPal, Razorpay, and others so your customers can pay with ease."
+    },
+    {
+      "group": "E-commerce",
+      "question": "Can you integrate my POS system?",
+      "answer": "Yes! 🔗 We’ve integrated POS, inventory systems, CRMs, and ERPs into online stores many times."
+    },
+    {
+      "group": "Client Relationships",
+      "question": "Will I talk directly to the developers?",
+      "answer": "We offer flexible communication! 💬 You can talk to our project manager or directly to devs/designers depending on your preference."
+    },
+    {
+      "group": "Client Relationships",
+      "question": "Is Abdul Moiz (CEO) available to discuss ideas?",
+      "answer": "Yes! Moiz is super approachable 🌟 — he loves discussing new startup ideas and business models. You can request a strategy call!"
+    },
+    {
+      "group": "Client Relationships",
+      "question": "Can I reach out to Hassan Tahir (CTO) for technical advice?",
+      "answer": "Yes! If you have tech-heavy questions, Hassan loves helping out founders and clients with architecture or stack decisions 🔧."
+    },
+    {
+      "group": "Client Relationships",
       "question": "Do you sign NDAs?",
-      "answer": "Yes, we can sign non‑disclosure agreements to protect your intellectual property and business data."
+      "answer": "Yes — we totally understand privacy and IP protection. 🛡️ We’re happy to sign NDAs before sharing ideas."
     },
     {
-      "question": "What is your development methodology?",
-      "answer": "We follow Agile Scrum practices—delivering iterative sprints, holding regular stand‑ups, and maintaining transparency via project management tools like Jira or Trello."
+      "group": "Startup Support",
+      "question": "Can you help me define my MVP?",
+      "answer": "Definitely! 🚀 Abdul Moiz (CEO) and the team will help you define the core features to launch fast and smart."
     },
     {
-      "question": "Do you offer post‑launch support and maintenance?",
-      "answer": "Yes, we provide support packages including bug fixes, feature enhancements, security patches, and 24/7 monitoring if required."
+      "group": "Startup Support",
+      "question": "Do you offer pitch deck or startup consulting?",
+      "answer": "Yes! 📈 We've helped founders with tech strategy and product presentations to attract investors."
     },
     {
-      "question": "How do you ensure security in your projects?",
-      "answer": "We follow OWASP guidelines, conduct code reviews, implement HTTPS, encryption, and regular security audits to protect your applications."
+      "group": "Startup Support",
+      "question": "How fast can you build an MVP?",
+      "answer": "We can deliver MVPs in 4 to 8 weeks depending on complexity. ⚡ We move fast without compromising quality."
     },
     {
-      "question": "Can you share case studies or references?",
-      "answer": "Definitely. We have delivered projects in fintech, edtech, e‑commerce, and healthcare. Email us to request specific case studies or client references."
+      "group": "Startup Support",
+      "question": "Will you help me scale after launch?",
+      "answer": "Absolutely! 🔥 We don't just build — we partner long-term to optimize, upgrade, and scale your product."
     },
     {
-      "question": "What industries do you specialize in?",
-      "answer": "We have experience in startups, enterprise, education, finance, healthcare, retail, and more. Our versatile team adapts to domain‑specific needs quickly."
+      "group": "Startup Support",
+      "question": "Can you advise on fundraising strategies?",
+      "answer": "While we're not investors, we can guide you on building products that impress VCs and angels! 💼"
     },
     {
-      "question": "How do you handle performance and scalability?",
-      "answer": "We use cloud‑native architectures, microservices, load balancing, CDNs, and caching strategies to ensure high performance and scalability."
+      "group": "Technical Deep Dive",
+      "question": "Can you create serverless architectures?",
+      "answer": "Yes! ⚙️ We love serverless with platforms like AWS Lambda, Firebase Functions, and Vercel."
     },
     {
-      "question": "Can I hire you for just a part of the project?",
-      "answer": "Yes, we offer team augmentation and staff‑augmentation services if you need experts to join your existing development team."
+      "group": "Technical Deep Dive",
+      "question": "Do you build APIs from scratch?",
+      "answer": "Yes! 🧩 REST, GraphQL, or custom API solutions — we build them robust, secure, and scalable."
     },
     {
-      "question": "Do you provide UI/UX design services?",
-      "answer": "Yes, we have a dedicated UI/UX team that handles user research, wireframing, prototyping, and high‑fidelity design using Figma and Adobe XD."
+      "group": "Technical Deep Dive",
+      "question": "Can you work with my existing backend?",
+      "answer": "Of course! 🔧 We can integrate your APIs, extend your database, and modernize old systems."
     },
     {
-      "question": "How do you communicate progress?",
-      "answer": "We provide weekly progress reports, demos at the end of each sprint, and hold regular video calls to keep you updated."
+      "group": "Technical Deep Dive",
+      "question": "Which databases do you work with?",
+      "answer": "We work with MongoDB, PostgreSQL, Firebase, MySQL, Supabase, and others — depending on the project needs! 🗂️"
     },
     {
-      "question": "What is your refund policy?",
-      "answer": "We don’t take payment until milestones are agreed upon. If you’re not satisfied at a milestone, we’ll work until you are or refund the payment for that milestone."
+      "group": "Technical Deep Dive",
+      "question": "Do you use containerization (Docker)?",
+      "answer": "Yes! 🛳️ For large or complex apps, we use Docker to make deployment smoother and safer."
+    },
+    {
+      "group": "Team Insights",
+      "question": "What inspires Abdul Moiz (CEO)?",
+      "answer": "Moiz is inspired by innovation, entrepreneurship, and helping startups win big. 💡"
+    },
+    {
+      "group": "Team Insights",
+      "question": "What drives Hassan Tahir (CTO)?",
+      "answer": "Hassan loves turning ambitious ideas into functional, futuristic products. 🛠️ Technology is his passion!"
+    },
+    {
+      "group": "Team Insights",
+      "question": "How would you describe the Asrnova team culture?",
+      "answer": "Friendly, passionate, collaborative, and focused on delivering impact! 🤝 We’re serious about results, but chill in vibe."
+    },
+    {
+      "group": "Team Insights",
+      "question": "Can I work directly with Abdul Moiz or Hassan Tahir?",
+      "answer": "Yes! 🎯 Key clients often get strategy or technical sessions directly with the leadership team."
+    },
+    {
+      "group": "Team Insights",
+      "question": "Do you offer internships or partnerships?",
+      "answer": "Yes! 📚 We love working with bright minds — whether you're a founder, student, or tech enthusiast."
+    },
+    {
+      "group": "Industries We Serve",
+      "question": "Do you specialize in any industries?",
+      "answer": "We work across industries: SaaS, E-commerce, Education, Healthtech, Finance, and more! 🌐"
+    },
+    {
+      "group": "Industries We Serve",
+      "question": "Have you worked on education platforms?",
+      "answer": "Yes! 🎓 We've built EdTech apps, LMS platforms, online academies, and more."
+    },
+    {
+      "group": "Industries We Serve",
+      "question": "Do you build fintech applications?",
+      "answer": "Yes! 💵 From wallet systems to payment gateways, we build fintech with security-first principles."
+    },
+    {
+      "group": "Industries We Serve",
+      "question": "Can you build healthcare applications?",
+      "answer": "Absolutely! 🏥 We've worked on telemedicine platforms, health dashboards, and HIPAA-compliant systems."
+    },
+    {
+      "group": "Industries We Serve",
+      "question": "Do you create internal tools for businesses?",
+      "answer": "Yes! 🛠️ CRM, ERP, task management — custom tools to help businesses operate smarter."
+    },
+    {
+      "group": "Trust and Safety",
+      "question": "Will my idea remain confidential?",
+      "answer": "100%! 🤐 We take IP protection seriously and happily sign NDAs."
+    },
+    {
+      "group": "Trust and Safety",
+      "question": "How secure are the applications you build?",
+      "answer": "Very secure! 🔒 We follow best practices like HTTPS, encryption, OWASP security guidelines, and secure APIs."
+    },
+    {
+      "group": "Trust and Safety",
+      "question": "Do you offer audits for existing applications?",
+      "answer": "Yes! 🧹 We audit your codebase, security, and performance and recommend improvements."
+    },
+    {
+      "group": "Performance",
+      "question": "Will my app or website be mobile responsive?",
+      "answer": "100%! 📱 Mobile-first design is a standard for all our projects."
+    },
+    {
+      "group": "Performance",
+      "question": "Will the site or app load fast?",
+      "answer": "Absolutely! ⚡ We optimize images, minimize code, use caching — speed is one of our biggest priorities."
+    },
+    {
+      "group": "Performance",
+      "question": "Can you guarantee uptime and performance after launch?",
+      "answer": "While tech can be unpredictable, with good hosting and monitoring, we ensure maximum uptime! 📊"
+    },
+    {
+      "group": "Pricing & Payments",
+      "question": "How do you price your projects?",
+      "answer": "We offer both fixed-price packages and flexible hourly models, depending on the project! 🧾"
+    },
+    {
+      "group": "Pricing & Payments",
+      "question": "Do you offer payment plans?",
+      "answer": "Yes! 💳 For large projects, we offer milestone-based or monthly installment payment options."
+    },
+    {
+      "group": "Pricing & Payments",
+      "question": "Is there an upfront deposit required?",
+      "answer": "Yes — a small deposit secures your project slot and helps us schedule the team properly. 🔖"
+    },
+    {
+      "group": "Pricing & Payments",
+      "question": "Can you work within a tight budget?",
+      "answer": "We’ll do our best! 🛠️ We love creative challenges and can suggest lean strategies if needed."
+    },
+    {
+      "group": "Advanced Tech Questions",
+      "question": "Can you integrate AI or machine learning features?",
+      "answer": "Yes! 🤖 We love working with AI — from chatbots to recommendation engines."
+    },
+    {
+      "group": "Advanced Tech Questions",
+      "question": "Do you build blockchain-based apps?",
+      "answer": "Yes! 🔗 We've explored blockchain tech for smart contracts and secure apps."
+    },
+    {
+      "group": "Advanced Tech Questions",
+      "question": "Can you implement real-time notifications?",
+      "answer": "Of course! 🔔 We use technologies like WebSockets and Firebase Cloud Messaging."
+    },
+    {
+      "group": "Advanced Tech Questions",
+      "question": "Can you add live chat support to apps or websites?",
+      "answer": "Yes! 💬 We integrate live chat tools like Intercom, Drift, or custom-built solutions."
+    },
+    {
+      "group": "Advanced Tech Questions",
+      "question": "Do you build apps with offline functionality?",
+      "answer": "Yes! 📡 We use service workers and caching to enable offline-first experiences."
+    },
+    {
+      "group": "Product Management",
+      "question": "Will you help prioritize product features?",
+      "answer": "Yes! 🎯 Abdul Moiz (CEO) works closely with clients to prioritize for maximum impact."
+    },
+    {
+      "group": "Product Management",
+      "question": "Do you use agile or scrum methodologies?",
+      "answer": "Yes! 🏃‍♂️ We follow agile principles for flexibility, speed, and collaboration."
+    },
+    {
+      "group": "Product Management",
+      "question": "Can I request feature changes mid-project?",
+      "answer": "Yes! ✨ We expect ideas to evolve — we'll discuss the impact and adjust the plan."
+    },
+    {
+      "group": "Product Management",
+      "question": "Will I get access to project management tools?",
+      "answer": "Yes! 📋 We work on tools like Trello, ClickUp, Jira, or whatever you prefer."
+    },
+    {
+      "group": "Product Management",
+      "question": "Do you provide product documentation?",
+      "answer": "Yes! 📚 We provide handover docs, API docs, and guides depending on the project."
+    },
+    {
+      "group": "Founder Advice",
+      "question": "What's Abdul Moiz's #1 advice to startups?",
+      "answer": "Start small, validate fast, and adapt faster! 🚀 Focus on user needs, not features."
+    },
+    {
+      "group": "Founder Advice",
+      "question": "What's Hassan Tahir's tech advice for founders?",
+      "answer": "Don't over-engineer early. Build fast, ship early, and iterate. 🔥"
+    },
+    {
+      "group": "Founder Advice",
+      "question": "How important is design in a startup app?",
+      "answer": "Extremely important! 🎨 First impressions matter — great UX wins users faster."
+    },
+    {
+      "group": "Founder Advice",
+      "question": "Should I launch with all features ready?",
+      "answer": "No! 🚫 Launch with your strongest core feature and improve with real feedback."
+    },
+    {
+      "group": "Founder Advice",
+      "question": "When should I start thinking about scaling?",
+      "answer": "Early — but don't overthink it. 🧠 Build for today, plan for tomorrow."
+    },
+    {
+      "group": "Team Behind The Scenes",
+      "question": "How big is your team?",
+      "answer": "We're a lean but powerful squad! 🚀 Each member is multi-talented and hands-on."
+    },
+    {
+      "group": "Team Behind The Scenes",
+      "question": "How do Abdul Moiz and Hassan Tahir lead the team?",
+      "answer": "With vision, energy, and a strong focus on building real value! 🤝"
+    },
+    {
+      "group": "Team Behind The Scenes",
+      "question": "Is your team remote or in-house?",
+      "answer": "We are flexible! 🏡 We work remote-first but love meeting up whenever needed."
+    },
+    {
+      "group": "Team Behind The Scenes",
+      "question": "Do you do internal hackathons or innovation days?",
+      "answer": "Yes! 🧪 Creativity is our engine — hack days are how some of our best ideas started!"
+    },
+    {
+      "group": "Team Behind The Scenes",
+      "question": "What tech stack does your internal team use most often?",
+      "answer": "React, Next.js, Node.js, Firebase, MongoDB — and a few secret sauces! 🍝"
+    },
+    {
+      "group": "Client Collaboration",
+      "question": "How often will I get updates during the project?",
+      "answer": "Weekly, at minimum! 📆 Plus daily chats or calls if needed."
+    },
+    {
+      "group": "Client Collaboration",
+      "question": "Can I be involved in design decisions?",
+      "answer": "Yes! 🎨 You’ll be part of the creative journey — we love client input."
+    },
+    {
+      "group": "Client Collaboration",
+      "question": "Will you teach me how to manage my app or site?",
+      "answer": "Yes! 📘 We provide walkthroughs, tutorials, or even short training sessions."
+    },
+    {
+      "group": "Client Collaboration",
+      "question": "Can you work in my time zone?",
+      "answer": "Yes! 🌍 We adapt our schedules to work closely with global clients."
+    },
+    {
+      "group": "Client Collaboration",
+      "question": "Can we do a project trial before full commitment?",
+      "answer": "Sure! 🎯 We offer pilot projects or discovery phases for peace of mind."
+    },
+    {
+      "group": "After Launch Support",
+      "question": "Do you offer support after the project ends?",
+      "answer": "Yes! 🛠️ We offer monthly maintenance, updates, and improvements."
+    },
+    {
+      "group": "After Launch Support",
+      "question": "Can you monitor server uptime and performance?",
+      "answer": "Yes! 🖥️ We set up monitoring and alerting to catch issues early."
+    },
+    {
+      "group": "After Launch Support",
+      "question": "Will you help me fix bugs if they appear after launch?",
+      "answer": "Absolutely! 🐛 We stand behind our work and fix any critical bugs promptly."
+    },
+    {
+      "group": "After Launch Support",
+      "question": "Can you add features later after launch?",
+      "answer": "Of course! ✨ Many of our projects continue growing after their first release."
+    },
+    {
+      "group": "After Launch Support",
+      "question": "Do you offer performance optimization services post-launch?",
+      "answer": "Yes! 🚀 Launch is just the beginning — we can optimize your app as user traffic grows."
+    },
+    {
+      "group": "Founder Journey & Story",
+      "question": "How did Abdul Moiz start this company?",
+      "answer": "Abdul Moiz started with a clear goal: to build digital products that solve real problems, not just add noise. 🚀"
+    },
+    {
+      "group": "Founder Journey & Story",
+      "question": "What inspired Hassan Tahir to become a CTO?",
+      "answer": "Hassan was always passionate about tech and design — his journey from building side projects to leading teams was natural. 💡"
+    },
+    {
+      "group": "Founder Journey & Story",
+      "question": "Was it hard to start a tech company?",
+      "answer": "Yes, but worth it! 💪 It takes grit, support, and a lot of learning from failure."
+    },
+    {
+      "group": "Founder Journey & Story",
+      "question": "Do Abdul Moiz and Hassan Tahir mentor others?",
+      "answer": "Yes! 🤝 They actively share knowledge, especially with students and early-stage founders."
+    },
+    {
+      "group": "Founder Journey & Story",
+      "question": "What’s their vision for the next 5 years?",
+      "answer": "To grow globally, launch original products, and empower the next generation of makers. 🌍"
+    },
+    {
+      "group": "Client Success Stories",
+      "question": "Do you have any client success stories?",
+      "answer": "Yes! 🙌 We've helped startups scale, MVPs get funded, and brands grow 3x in engagement."
+    },
+    {
+      "group": "Client Success Stories",
+      "question": "Have any of your apps been featured publicly?",
+      "answer": "Yes! Some of our work has been highlighted on Product Hunt and startup showcases. 🌟"
+    },
+    {
+      "group": "Client Success Stories",
+      "question": "Can I talk to a past client before hiring?",
+      "answer": "Absolutely! 🧾 We can share references and case studies on request."
+    },
+    {
+      "group": "Client Success Stories",
+      "question": "Do you track metrics after launch?",
+      "answer": "Yes! 📊 We help you measure impact — from bounce rate to conversions and retention."
+    },
+    {
+      "group": "Client Success Stories",
+      "question": "Have you helped a startup get investment?",
+      "answer": "Yes! 💸 Several clients raised funds post-MVP with our help."
+    },
+    {
+      "group": "Myths & Misconceptions",
+      "question": "Do I need a perfect idea to start?",
+      "answer": "Nope! 🚫 Start messy. Feedback will shape your product better than assumptions."
+    },
+    {
+      "group": "Myths & Misconceptions",
+      "question": "Is building apps expensive?",
+      "answer": "Not necessarily. 💡 A focused MVP can be surprisingly affordable!"
+    },
+    {
+      "group": "Myths & Misconceptions",
+      "question": "Do I need a technical cofounder?",
+      "answer": "Not always. With the right dev partner (like us), you’re covered! 👨‍💻"
+    },
+    {
+      "group": "Myths & Misconceptions",
+      "question": "Will I lose control of my idea?",
+      "answer": "Never! 💼 You own your idea and IP. We’re just your expert execution team."
+    },
+    {
+      "group": "Myths & Misconceptions",
+      "question": "Should I delay launch until everything is ready?",
+      "answer": "No! 🚀 Launch lean, test fast, and improve. Waiting kills momentum."
+    },
+    {
+      "group": "Startup Tips",
+      "question": "What’s one common startup mistake?",
+      "answer": "Trying to please everyone — focus on a niche and dominate it. 🎯"
+    },
+    {
+      "group": "Startup Tips",
+      "question": "How do I validate my idea?",
+      "answer": "Talk to users, run surveys, build a landing page. 📋 Don't skip this step!"
+    },
+    {
+      "group": "Startup Tips",
+      "question": "How should I pick the first feature?",
+      "answer": "Pick the feature that solves the biggest pain point. 🧠 Less is more."
+    },
+    {
+      "group": "Startup Tips",
+      "question": "Do you help founders without design skills?",
+      "answer": "Yes! 🎨 We handle full UI/UX design — no prior experience needed from your side."
+    },
+    {
+      "group": "Startup Tips",
+      "question": "What’s better: web app or mobile app first?",
+      "answer": "Depends on the audience. 🔍 We help decide what gives you fastest traction."
+    },
+    {
+      "group": "Hiring & Working With Us",
+      "question": "How can I hire your team?",
+      "answer": "Just reach out! 📞 We’ll schedule a discovery call and go from there."
+    },
+    {
+      "group": "Hiring & Working With Us",
+      "question": "Do you work on retainers or fixed projects?",
+      "answer": "Both! 🧾 We’re flexible based on what your business needs."
+    },
+    {
+      "group": "Hiring & Working With Us",
+      "question": "Do you offer white-label services?",
+      "answer": "Yes! 🤝 We’ve partnered with agencies before under full NDA."
+    },
+    {
+      "group": "Hiring & Working With Us",
+      "question": "Can I book a technical consultation?",
+      "answer": "Yes! 📞 Hassan Tahir (CTO) often hops on tech consultations to help founders plan smart."
+    },
+    {
+      "group": "Hiring & Working With Us",
+      "question": "How soon can we get started?",
+      "answer": "Typically within 3–5 business days. 🗓️ Sooner if urgent!"
+    },
+    {
+      "group": "Culture & Values",
+      "question": "What’s your team culture like?",
+      "answer": "Supportive, creative, and always learning. 🤝 We celebrate wins and fail forward."
+    },
+    {
+      "group": "Culture & Values",
+      "question": "What values guide your decisions?",
+      "answer": "Transparency, ownership, speed, and empathy. 💼💡"
+    },
+    {
+      "group": "Culture & Values",
+      "question": "How do you stay updated with tech trends?",
+      "answer": "We follow global communities, attend events, and run internal knowledge shares. 🌐"
+    },
+    {
+      "group": "Culture & Values",
+      "question": "Do you take on social impact projects?",
+      "answer": "Yes! 🌍 We love working with NGOs, edtechs, and mission-driven orgs."
+    },
+    {
+      "group": "Culture & Values",
+      "question": "Do you ever turn down projects?",
+      "answer": "Yes — if it doesn’t align with our values or if we’re not the right fit. ❤️"
     }
   ]
 }

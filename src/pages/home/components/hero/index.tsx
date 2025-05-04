@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
 import './styles.css';
-import SwingingRobot from './swingingRobot';
 import ParallaxEffect from './textMoving';
 import { ButtoninBookaCall } from '@components/buttonForHero';
-const Hero = ({handleScrollToBook}:any) => {
+import { GlobeDemo } from './globe';
+import uaaa from '../../../../assets/nayi image.png'
+const Hero = ({ handleScrollToBook }: any) => {
   return (
-    <section className="heroPageMainSection sm:h-dvh flex flex-col overflow-hidden w-full m-auto gap-10 !pb-10">
+    <section className="flex flex-col overflow-hidden w-full m-auto gap-40 !pb-10">
       <div className="contentInHeroPage flex flex-col gap-10 w-full h-full justify-center items-center ">
-        <div className="flex flex-col sm:flex-row sm:w-[70%] justify-between items-center">
+        <div className="flex flex-col-reverse sm:flex-row sm:w-[70%] justify-between items-center">
           <motion.div
 
             className="textContent flex flex-col gap-6 sm:w-[70%] items-center sm:items-start"
@@ -24,7 +25,7 @@ const Hero = ({handleScrollToBook}:any) => {
               Websites Fade, <br /> Stories Last Forever
             </motion.h1>
             <motion.p
-              className="orbitron text-xl text-[#000000] leading-relaxed w-[80%] max-sm:text-[14px] max-sm:text-center sm:w-full "
+              className="orbitron text-xl text-white leading-relaxed w-[80%] max-sm:text-[14px] max-sm:text-center sm:w-full "
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -35,18 +36,12 @@ const Hero = ({handleScrollToBook}:any) => {
               create digital experiences that make your brand impossible to
               ignore.
             </motion.p>
-            <ButtoninBookaCall text="Get in touch" onClick={handleScrollToBook}/>
+            <ButtoninBookaCall text="Get in touch" onClick={handleScrollToBook} />
           </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-          >
-            <SwingingRobot />
-          </motion.div>
+          <GlobeDemo />
         </div>
       </div>
+      <img src={uaaa} className='absolute w-[30%] h-[80%] right-0 -z-10 drop-shadow-[2px_4px_6px_black] opacity-50' />
       <div className="movingText w-[100%]">
         <ParallaxEffect />
       </div>

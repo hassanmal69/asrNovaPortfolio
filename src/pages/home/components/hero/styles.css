@@ -2,10 +2,24 @@
 .textContent p {
   margin: 0 !important;
 }
+
 .textContent {
   margin: 0;
   padding: 0;
 }
+
+.heroPageMainSection {
+  position: absolute;
+  mix-blend-mode: plus-lighter;
+  height: 100%;
+  width: 100vw;
+  z-index: 50;
+  pointer-events: none;
+  background: #000000;
+  opacity: 60%;
+  background: linear-gradient(1deg, rgba(0, 0, 0, 1) 75%, rgb(0, 0, 0) 100%);
+}
+
 /* From Uiverse.io by Spacious74 */
 .buttonDivinHero button {
   font-size: 1.2em;
@@ -42,9 +56,11 @@
   background: linear-gradient(90deg, #03a9f4, #f441a5);
   filter: blur(1.2em);
 }
+
 .buttonDivinHero:active::before {
   filter: blur(0.2em);
 }
+
 @media only screen and (max-width: 600px) {
   .textContent {
     margin-top: 30px;
