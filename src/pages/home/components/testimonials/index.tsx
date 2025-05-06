@@ -31,6 +31,7 @@ const Testimonials = () => {
         <motion.div
           initial={{ zIndex: 0 }}
           whileHover={{ zIndex: 40, scale: 1.1 }}
+          whileTap={{ zIndex: 40, scale: 1.1 }} 
           className=" absolute bg-black !p-10 sm:!p-14 text-center top-1/4 sm:top-1/3 left-0 sm:left-1/3  card1 h-[300px] sm:h-[500px] w-[350px] sm:w-[550px] border-2 border-zinc-800 rounded-4xl flex flex-col items-center">
           <h2 className='text-sm sm:text-2xl font-light'>Working with AsrNova has been an outstanding experience. Moiz and Hassan truly understand how to bring ideas to life with innovation and precision. Their professionalism, communication, and dedication to delivering high-quality work exceeded our expectations. We couldn't be happier with the results and look forward to working with them again!</h2>
         </motion.div>

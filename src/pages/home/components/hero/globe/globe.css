@@ -1,0 +1,9 @@
+Canvas {
+    position: absolute;
+    left: -303px;
+    top: -90px;
+    display: block;
+    width: 100% !important;
+    height: 1241px;
+    touch-action: auto;
+}

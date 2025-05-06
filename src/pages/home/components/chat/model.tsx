@@ -36,9 +36,9 @@ export function AnimatedModalDemo() {
   };
   
   return (
-    <div className="py-40 flex items-center justify-center">
+    <div className=" py-40 flex items-center justify-center">
       <Modal>
-        <div className=" bottom-8 right-30 z-500000">
+        <div className="bottom-8 right-30 z-500000">
           <ModalTrigger className=" flex justify-center group/modal-btn">
             <button>chat support</button>
           </ModalTrigger>
@@ -65,8 +65,8 @@ export function AnimatedModalDemo() {
                 <button onClick={handleCheck} className="">Send</button>
                 {ask ? (
                   similar ? (
-                    <div className="absolute h-full w-full flex items-center justify-center pointer-events-none">
-                      <div className="bg-gray-800 w-full tooltip">
+                    <div className="absolute -right-10 sm:right-0 h-full w-full flex items-center justify-center pointer-events-none">
+                      <div className="bg-gray-800 w-[300px] sm:w-full tooltip">
                         <ul className="w-full">
                           <li className="w-full h-full text-xs">{similar.answer}</li>
                         </ul>
