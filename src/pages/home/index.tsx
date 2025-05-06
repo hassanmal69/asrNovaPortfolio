@@ -6,7 +6,6 @@ import BookaCall from "./components/bookaCall"
 import Footer from "@layout/footer"
 import MeetourTeam from "./components/meetOurTeam"
 import { Navbar } from "@layout/navbar"
-import pic from '../../assets/freepik__the-style-is-candid-image-photography-with-natural__14633.jpeg'
 import { GlowingEffectDemo } from "./components/whyChoose/gloweffect"
 import '../../global.css'
 import Testimonials from "./components/testimonials"

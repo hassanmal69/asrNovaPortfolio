@@ -1,8 +1,6 @@
 
 import React, { lazy, Suspense } from 'react';
-import { motion } from 'framer-motion';
 
-// Replace the Next.js dynamic import with React.lazy
 const World = lazy(() => import('./globe').then(module => ({ default: module.World })));
 
 export function GlobeDemo() {
@@ -394,10 +392,9 @@ export function GlobeDemo() {
         ];
 
         return (
-            <div className="hidden sm:flex flex-row items-center justify-center h-screen md:h-auto bg-transparent relative z-30 w-full">
-                <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
-                    <div className="absolute w-full top-0 inset-x-0 h-40  z-40" />
-                    <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+            <div className="flex flex-row items-center justify-center h-auto bg-transparent relative z-30 w-full">
+                <div className="max-w-7xl mx-auto w-full relative overflow-x-hidden overflow-y-hidden h-[17rem] md:h-[40rem] px-4">
+                    <div className="absolute w-full h-72 md:h-full z-10">
                         {/* Wrap the lazy-loaded component in Suspense */}
                         <Suspense fallback={<div>Loading globe...</div>}>
                             <World data={sampleArcs} globeConfig={globeConfig} />
