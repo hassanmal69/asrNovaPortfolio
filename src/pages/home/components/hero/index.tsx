@@ -3,7 +3,7 @@ import './styles.css';
 import ParallaxEffect from './textMoving';
 import { ButtoninBookaCall } from '@components/buttonForHero';
 import { GlobeDemo } from './globe';
-import uaaa from '../../../../assets/nayi image.png'
+import uaaa from '../../../../assets/nayi image.webp'
 const Hero = ({ handleScrollToBook }: any) => {
   return (
     <section className="flex flex-col overflow-hidden w-full m-auto gap-40 !pb-10">
