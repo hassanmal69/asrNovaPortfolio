@@ -60,7 +60,7 @@ const Services = () => {
     threshold: 0.2,
   });
   const Payload = servicesContent.services.map(
-    (service: { img: string | any; title: string; description: string }) => ({
+    (service: { img: string; title: string; description: string }) => ({
       title: service.title,
       description: service.description,
       img: service.img,

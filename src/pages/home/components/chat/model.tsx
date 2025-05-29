@@ -36,7 +36,7 @@ export function AnimatedModalDemo() {
   };
   
   return (
-    <div className=" py-40 flex items-center justify-center">
+    <div className=" py-40 flex items-center justify-center hidden">
       <Modal>
         <div className="bottom-8 right-30 z-500000">
           <ModalTrigger className=" flex justify-center group/modal-btn">
