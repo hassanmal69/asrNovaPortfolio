@@ -1,10 +1,6 @@
 import {
   Menu,
-  X,
-  Phone,
-  Settings,
-  Briefcase,
-  MessageSquare,
+  X
 } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";

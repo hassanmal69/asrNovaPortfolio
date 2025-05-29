@@ -396,7 +396,7 @@ export function GlobeDemo() {
                 <div className="max-w-7xl mx-auto w-full relative overflow-x-hidden overflow-y-hidden h-[17rem] md:h-[40rem] px-4">
                     <div className="absolute w-full h-72 md:h-full z-10">
                         {/* Wrap the lazy-loaded component in Suspense */}
-                        <Suspense fallback={<div>Loading globe...</div>}>
+                        <Suspense fallback={<div className='text-amber-50'>Loading.....</div>}>
                             <World data={sampleArcs} globeConfig={globeConfig} />
                         </Suspense>
                     </div>

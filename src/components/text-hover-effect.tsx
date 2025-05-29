@@ -64,14 +64,6 @@ export const TextHoverEffect = ({
           initial={{ cx: "50%", cy: "50%" }}
           animate={maskPosition}
           transition={{ duration: duration ?? 0, ease: "easeOut" }}
-
-          // example for a smoother animation below
-
-          //   transition={{
-          //     type: "spring",
-          //     stiffness: 300,
-          //     damping: 50,
-          //   }}
         >
           <stop offset="0%" stopColor="white" />
           <stop offset="100%" stopColor="black" />
@@ -92,7 +84,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="fill-transparent marzi-ka-font stroke-neutral-200 font-[helvetica] text-6xl font-bold bg-gradient-to-r from-[#5454D4] to-[#8C8CFF] bg-clip-text text-transparent "
+        className="fill-transparent marzi-ka-font stroke-white font-[helvetica] text-6xl font-bold bg-gradient-to-r from-[#5454D4] to-[#8C8CFF] bg-clip-text text-transparent "
         style={{ opacity: hovered ? 0.7 : 0 }}
       >
         {text}
