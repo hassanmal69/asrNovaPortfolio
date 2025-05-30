@@ -12,14 +12,14 @@ export function GlowingEffectDemo() {
           <ul className="grid grid-cols-1 sm:h-[44rem] w-[75%] grid-rows-none !gap-10 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
         <GridItem
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
-          icon={<Box className="h-4 w-4 text-black dark:text-neutral-400" />}
+          icon={<Box className="h-4 w-4 text-neutral-400" />}
           title=" Original Ideas Only"
           description="We don’t recycle old trends or templates. Every project is treated like a fresh canvas — unique, bold, and built from scratch with purpose."
         />
 
         <GridItem
           area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
-          icon={<Settings className="h-4 w-4 text-black dark:text-neutral-400" />}
+          icon={<Settings className="h-4 w-4 text-neutral-400" />}
           title="No Boring Projects"
           description="We avoid cookie-cutter sites that lack soul. If it’s been done a thousand times, it’s not for us. We’re here for work that excites and inspires."
          
@@ -27,21 +27,21 @@ export function GlowingEffectDemo() {
 
         <GridItem
           area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
-          icon={<Lock className="h-4 w-4 text-black dark:text-neutral-400" />}
+          icon={<Lock className="h-4 w-4 text-neutral-400" />}
           title="Future Driven Solution"
           description="At asrnova, we don't chase what’s already out there. We craft digital experiences with tomorrow in mind — innovative, scalable, and truly ahead of the curve."          
         />
 
         <GridItem
           area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
-          icon={<Sparkles className="h-4 w-4 text-black dark:text-neutral-400" />}
+          icon={<Sparkles className="h-4 w-4 text-neutral-400" />}
           title="Focused on What Matters"
           description="Quality over quantity — always. We take on fewer projects so we can go deep, challenge the norm, and deliver work that stands out."
         />
 
         <GridItem
           area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
-          icon={<Search className="h-4 w-4 text-black dark:text-neutral-400" />}
+          icon={<Search className="h-4 w-4text-neutral-400" />}
           title="Creative Growth Partners"
           description="We’re not just developers. We’re collaborators, thinkers, and partners in your journey — helping you explore ideas you didn’t know were possible."
         />
@@ -78,10 +78,10 @@ const GridItem = ({ area, icon, title, description }: GridItemProps) => {
               {icon}
             </div>
             <div className="space-y-3">
-              <h3 className="-tracking-4 azonix pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance text-black md:text-2xl/[1.875rem] dark:text-white">
+              <h3 className="-tracking-4 azonix pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance  md:text-2xl/[1.875rem] text-white">
                 {title}
               </h3>
-              <h2 className="font-sans text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
+              <h2 className="font-sans text-sm/[1.125rem] md:text-base/[1.375rem] text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
                 {description}
               </h2>
             </div>
