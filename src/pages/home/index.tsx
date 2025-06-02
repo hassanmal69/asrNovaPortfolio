@@ -20,10 +20,8 @@ const Home = () => {
     <section className=""
     style={{
       background:"black",
-      // backgroundImage: `url(${pic})`,
       backgroundRepeat: "no-repeat",
       backgroundSize: "220vh",
-      // backgroundSize: " cover"
     }}>
     <Navbar />
     <Hero handleScrollToBook={handleScrollToBook} />

@@ -106,7 +106,8 @@ export const ParallaxScrollSecond = ({
                     }}
                     key={"grid-1" + idx}
                   >
-                    <img src={el.img} className="rounded-lg " alt="thumbnail" />
+                    <img src={el.img} loading="lazy"
+                      decoding="async" className="rounded-lg " alt="thumbnail" />
                     <div className="flex flex-col  items-center justify-center">
                       <h1 className="ethnocentric text-center sm:text-xl font-semibold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight">
                         {el.title}
@@ -140,7 +141,8 @@ export const ParallaxScrollSecond = ({
                   </>
                 ) : (
                   <motion.div className="services-cards" key={"grid-2" + idx}>
-                    <img src={el.img} className="rounded-lg " alt="thumbnail" />
+                    <img src={el.img} loading="lazy"
+                      decoding="async" className="rounded-lg " alt="thumbnail" />
                     <div className="flex flex-col  items-center justify-center">
                       <h1 className="ethnocentric text-center sm:text-xl font-semibold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight">
                         {el.title}
@@ -182,7 +184,8 @@ export const ParallaxScrollSecond = ({
                     }}
                     key={"grid-3" + idx}
                   >
-                    <img src={el.img} className="rounded-lg " alt="thumbnail" />
+                    <img src={el.img} loading="lazy"
+                      decoding="async" className="rounded-lg " alt="thumbnail" />
                     <div className="flex flex-col  items-center justify-center">
                       <h1 className="ethnocentric text-center sm:text-xl font-semibold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight">
                         {el.title}

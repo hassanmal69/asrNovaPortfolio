@@ -26,7 +26,8 @@ const Timeline = ({
           {...(translateY !== undefined && { y: translateY })}
           {...(rotateZ !== undefined && { rotateZ })}
         >
-          <img src={img} className="rounded-lg" alt="thumbnail" />
+          <img src={img} loading="lazy"
+            decoding="async" className="rounded-lg" alt="thumbnail" />
           <div className="flex flex-col items-center justify-center">
             <h1 className="ethnocentric text-center sm:text-xl font-semibold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight">
               {title}

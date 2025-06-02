@@ -25,7 +25,7 @@
 }
 
 .imginservice {
-  filter: grayscale(50%);
+  filter: grayscale(100%);
 }
 
 .blackscreen {

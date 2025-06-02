@@ -5,8 +5,6 @@ import {
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "@assets/logo.png";
-import { AnimatedModalDemo } from "../../pages/home/components/chat/model.tsx";
-
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,7 +13,6 @@ export const Navbar = () => {
     { name: "Work" },
     { name: "Testimonials" },
     { name: "Contact" },
-    { name: "Chat Support" },
   ];
 
   // Animation variants
@@ -62,11 +59,8 @@ export const Navbar = () => {
               className="flex items-center !px-3 !py-2 text-sm font-medium text-white transition-colors rounded-lg hover:bg-white/20 hover:scale-105 transition-all duration-200"
             >
               <span className="ml-2">
-                {item.name === "Chat Support" ? (
-                  <AnimatedModalDemo />
-                ) : (
-                  item.name
-                )}
+
+                {item.name}
               </span>
             </a>
           ))}
@@ -97,23 +91,17 @@ export const Navbar = () => {
             >
               <div className="flex flex-col h-[60%] justify-evenly">
                 {navItems.map((item) =>
-                  item.name === "Chat Support" ? (
-                    <div key={item.name} onClick={() => setIsOpen(true)}>
-                      <AnimatedModalDemo />
-                    </div>
-                  ) : (
-                    <motion.a
-                      key={item.name}
-                      href={`#${item.name.toLowerCase().replace(" ", "-")}`}
-                      className="flex items-center px-4 py-3 text-sm font-medium text-white transition-colors rounded-lg hover:bg-white/20"
-                      onClick={() => setIsOpen(false)}
-                      variants={itemVariants}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <span className="ml-3">{item.name}</span>
-                    </motion.a>
-                  )
+                  <motion.a
+                    key={item.name}
+                    href={`#${item.name.toLowerCase().replace(" ", "-")}`}
+                    className="flex items-center px-4 py-3 text-sm font-medium text-white transition-colors rounded-lg hover:bg-white/20"
+                    onClick={() => setIsOpen(false)}
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <span className="ml-3">{item.name}</span>
+                  </motion.a>
                 )}
 
               </div>

@@ -4,7 +4,7 @@ import Hassan from "@assets/hassanNFT.webp";
 import Moiz from "@assets/moizNft.webp";
 import Point from "@assets/monkeypointin.webp";
 import Broken from "@assets/12122.webp";
-import catPoint from "@assets/catpoint.png";
+import catPoint from "@assets/catpoint.webp";
 import { Heading } from "@components/heading";
 import { useState } from "react";
 
@@ -52,6 +52,8 @@ const MeetourTeam = () => {
           >
             <motion.img
               src={Broken}
+              loading="lazy"
+              decoding="async"
               className="absolute z-50 mix-blend-hard-light pointer-events-none w-[500px] rounded-full"
               initial={{ scale: 0 }}
               animate={{ scale: hover === index ? 1.1 : 0 }}
@@ -59,6 +61,8 @@ const MeetourTeam = () => {
             <div className="absolute z-100 w-full h-full flex items-center ">
               <motion.img
                 src={member.hoverImage}
+                loading="lazy"
+                decoding="async"
                 className="absolute z-100 w-[130px] sm:w-[230px]"
                 initial={{ scale: 0, y: 0 }}
                 animate={{
@@ -100,6 +104,8 @@ const MeetourTeam = () => {
                 src={member.image}
                 className="w-[500px] rounded-full z-40"
                 initial={{ scale: 1 }}
+                loading="lazy"
+                decoding="async"
                 animate={{ scale: hover === index ? 1.1 : 1 }}
                 transition={{ duration: 0.3 }}
               />
