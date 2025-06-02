@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
 import "./work.css";
-import astronoutImg from "@assets/astranout.png";
-import pointinAstraunaut from "@assets/pointing.png";
+import astronoutImg from "@assets/astranout.webp";
+import pointinAstraunaut from "@assets/pointing.webp";
 import MoonComponent from "./animatedmoon";
-import { useState, useRef, useEffect } from "react";
-import spaceShip from "@assets/spaceship-.png";
+import { useState, useEffect } from "react";
 import { Heading } from "@components/heading";
 const WorkComponent = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [isCursorVisible, setCursorVisible] = useState(false);
   const [isMobile, setisMobile] = useState(window.innerWidth < 670);
   useEffect(() => {
     const handleResize = () => setisMobile(window.innerWidth < 670);
@@ -17,30 +15,11 @@ const WorkComponent = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  const cursorRef = useRef<HTMLDivElement | null>(null);
-  const containerRef = useRef(null);
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (cursorRef.current) {
-      cursorRef.current.style.left = `${e.clientX}px`;
-      cursorRef.current.style.top = `${e.clientY}px`;
-    }
-  };
   return (
     <motion.section
       id="work"
-      onMouseMove={handleMouseMove}
-      ref={containerRef}
-      onMouseEnter={() => setCursorVisible(true)}
-      onMouseLeave={() => setCursorVisible(false)}
-      className="mainSectionMainWork w-full sm:h-[130vh] overflow-hidden justify-start cursor-none"
+      className="mainSectionMainWork w-full sm:h-[130vh] overflow-hidden justify-start"
     >
-      {isCursorVisible && (
-        <div className="customCursor" ref={cursorRef}>
-          {" "}
-          <img src={spaceShip} className="w-full h-full" />
-        </div>
-      )}
       <div className="blackscreen w-full h-full absolute z-4 pointer-events-none"></div>
       <div className="textContentinwork !mb-30 flex flex-col gap-3 relative z-50">
         <Heading
@@ -59,23 +38,24 @@ const WorkComponent = () => {
           project.img ? (
             <motion.img
               key={index}
+              loading="lazy"
+              decoding="async"
               src={
                 isMobile
                   ? project.img
                   : hoveredIndex !== null
-                  ? project.point
-                  : project.img
+                    ? project.point
+                    : project.img
               }
               alt="Project Image"
-              className={`sm:w-1/3 h-[450px] imageinworkContainerAstranout ${
-                isMobile
+              className={`sm:w-1/3 h-[450px] imageinworkContainerAstranout ${isMobile
                   ? project.img
                   : hoveredIndex === 0
-                  ? "point-left w-[27%] !h-[380px]"
-                  : hoveredIndex === 2
-                  ? "point-right w-[27%] !h-[380px]"
-                  : ""
-              }`}
+                    ? "point-left w-[27%] !h-[380px]"
+                    : hoveredIndex === 2
+                      ? "point-right w-[27%] !h-[380px]"
+                      : ""
+                }`}
               animate={{
                 y: [0, -25, 0],
                 opacity: [0.5, 1],

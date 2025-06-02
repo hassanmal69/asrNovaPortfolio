@@ -8,16 +8,16 @@ import {
 } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import Image from "@assets/laalanti.jpg";
+import Image from "@assets/laalanti.webp";
 import { ParallaxScrollSecond } from "./parallax-scroll-2";
-import Web from "@assets/web.jpeg";
-import App from "@assets/appdev.jpeg";
-import SaaS from "@assets/SaaS.jpeg";
-import AR from "@assets/Ar.jpeg";
-import AI from "@assets/AI.jpeg";
-import Blockchain from "@assets/blockchain.png";
-import Automation from "@assets/automation.png";
-import Design from "@assets/Design.png";
+import Web from "@assets/web.webp";
+import App from "@assets/appdev.webp";
+import SaaS from "@assets/SaaS.webp";
+import AR from "@assets/Ar.webp";
+import AI from "@assets/AI.webp";
+import Blockchain from "@assets/blockchain.webp";
+import Automation from "@assets/automation.webp";
+import Design from "@assets/Design.webp";
 import { TextHoverEffect } from "@components/text-hover-effect";
 
 const Services = () => {
@@ -105,6 +105,8 @@ const Services = () => {
           }}
         >
           <img
+            loading="lazy"
+            decoding="async"
             className="w-full h-full relative rounded-3xl imginservice"
             src={Image}
           />

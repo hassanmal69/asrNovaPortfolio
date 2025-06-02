@@ -29,31 +29,26 @@ body {
 @font-face {
   font-family: "Azonix";
   src: url("/public/fonts/azonix/Azonix.otf") format("opentype");
+    font-display: swap;
 }
 
 @font-face {
   font-family: "Orbitron";
-  src: url("/public/fonts/Orbitron/Orbitron-VariableFont_wght.ttf") format("opentype");
-}
+  src: url("/public/fonts/Orbitron/Orbitron-Regular.woff2") format("opentype");
+  font-display: swap;
 
-@font-face {
-  font-family: "BLANKA";
-  src: url("/public/fonts/BLANKA/Blanka-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "ethnocentric";
-  src: url("/public/fonts/ethnocentric/Ethnocentric\ Rg.otf") format("opentype");
+  src: url("/public/fonts/ethnocentric/Ethnocentric-Regular.woff2") format("woff2");
+  font-display: swap;
+
 }
 
 .azonix {
   font-family: "Azonix", sans-serif;
 }
-
-.blanka {
-  font-family: "BLANKA", sans-serif;
-}
-
 .ethnocentric {
   font-family: "ethnocentric", sans-serif;
 }
