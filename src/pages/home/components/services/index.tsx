@@ -6,10 +6,11 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useMemo, lazy, Suspense } from "react";
 import { useInView } from "react-intersection-observer";
 import Image from "@assets/laalanti.webp";
-import { ParallaxScrollSecond } from "./parallax-scroll-2";
+// import { ParallaxScrollSecond } from "./parallax-scroll-2";
+const ParallaxScrollSecond = lazy(() => import("./parallax-scroll-2"))
 import Web from "@assets/web.webp";
 import App from "@assets/appdev.webp";
 import SaaS from "@assets/SaaS.webp";
@@ -18,15 +19,16 @@ import AI from "@assets/AI.webp";
 import Blockchain from "@assets/blockchain.webp";
 import Automation from "@assets/automation.webp";
 import Design from "@assets/Design.webp";
-import { TextHoverEffect } from "@components/text-hover-effect";
+const TextHoverEffect = lazy(() => import('@components/text-hover-effect'))
 
 const Services = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({ target: containerRef });
-  const [isMobile, setisMobile] = useState(window.innerWidth < 660);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 660);
   useEffect(() => {
-    const handleResize = () => setisMobile(window.innerWidth < 660);
+    const handleResize = () => setIsMobile(window.innerWidth < 660);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -37,7 +39,6 @@ const Services = () => {
 
   const rotateX = useTransform(scrollYProgress, [0, 0.1], [6, 0]);
   const rotateYInput = isMobile ? [0, 0.05, 0.2] : [0, 0.1, 0.3];
-
   const rotateY = useTransform(scrollYProgress, rotateYInput, [0, 100, 500]);
   const visible = useTransform(scrollYProgress, [0, 0.1, 0.3], [1, 0.5, 0]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0.8]);
@@ -45,103 +46,84 @@ const Services = () => {
   const textBlur = useTransform(scrollYProgress, [0, 0.1], [0, 6]);
   const textUp = useTransform(scrollYProgress, [0, 0.1], [0, 20]);
   const finalBlur = useMotionTemplate`blur(${textBlur}px)`;
-  const yPosforBg = useTransform(
-    scrollYProgress,
-    [0, 0.1, 0.3, 0.5, 0.7],
-    [0, 100, 500, 700, 900]
-  );
-  const bgOpacity = useTransform(
-    scrollYProgress,
-    [0, 0.1, 0.3, 0.5],
-    [1, 0.9, 0.7, 0.5]
-  );
+  const yPosforBg = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5, 0.7], [0, 100, 500, 700, 900]);
+  const bgOpacity = useTransform(scrollYProgress, [0, 0.1, 0.3, 0.5], [1, 0.9, 0.7, 0.5]);
+
   const { ref: textRef, inView } = useInView({
     triggerOnce: false,
     threshold: 0.2,
   });
-  const Payload = servicesContent.services.map(
-    (service: { img: string; title: string; description: string }) => ({
-      title: service.title,
-      description: service.description,
-      img: service.img,
-    })
+
+  const Payload = useMemo(
+    () =>
+      servicesContent.services.map(({ title, description, img }) => ({
+        title,
+        description,
+        img,
+      })),
+    []
   );
+
+  const introWords = useMemo(() => servicesContent.intro.split(" "), []);
+
   return (
     <motion.div
       id="service"
       ref={containerRef}
-      className="mainSectionService flex flex-col items-center  bg-black w-full  !py-10"
+      className="mainSectionService flex flex-col items-center bg-black w-full !py-10"
     >
       <motion.div
         className="circleinbg relative bg-gradient-to-r from-[#5454D4] to-[#8C8CFF]"
         style={{ y: yPosforBg, opacity: bgOpacity }}
         animate={{}}
-        transition={{
-          repeat: Infinity,
-          duration: 4,
-          ease: "easeInOut",
-        }}
-      ></motion.div>
+        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+      />
+
       <div className="w-full h-[100vh] sm:h-[150vh]">
         <motion.h1
           className="ethnocentric text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#00F5A0] to-[#00A3FF] bg-clip-text text-transparent leading-tight text-center px-4"
-          style={{
-            opacity: textOpacity,
-            scale: textScale,
-            filter: finalBlur,
-            y: textUp,
-          }}
+          style={{ opacity: textOpacity, scale: textScale, filter: finalBlur, y: textUp }}
         >
           Our Vision
         </motion.h1>
 
         <motion.div
           className="imageMainContainer translate-z-[20px] sm:translate-z-[40px] relative flex justify-center items-center shadow-2xl rounded-3xl !-mt-2 w-[90%] h-[350px] sm:w-[70%] sm:h-[700px] border-4"
-          style={{
-            rotateX: rotateX,
-            // translateZ: "40px",
-            y: rotateY,
-            opacity: visible,
-          }}
+          style={{ rotateX, y: rotateY, opacity: visible }}
         >
           <img
             loading="lazy"
             decoding="async"
             className="w-full h-full relative rounded-3xl imginservice"
             src={Image}
+            alt="Service Illustration"
           />
           <motion.p
             ref={textRef}
-            className="absolute text-white h-[60%] px-4 py-2 flex gap-1 sm:gap-2 w-full  sm:w-[50%] bg-opacity-50 rounded-md flex-wrap"
+            className="absolute text-white h-[60%] px-4 py-2 flex gap-1 sm:gap-2 w-full sm:w-[50%] bg-opacity-50 rounded-md flex-wrap"
           >
-            {servicesContent.intro.split(" ").map((word, index) => {
-              const delay = index * 0.05; // Stagger effect
-
-              return (
-                <motion.span
-                  key={index}
-                  className="inline-block text-sm sm:text-2xl font-extrabold"
-                  style={{ display: "inline-block", whiteSpace: "nowrap" }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={
-                    inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                  } // Trigger only when in view
-                  transition={{ duration: 0.5, delay: delay }}
-                >
-                  {word}
-                </motion.span>
-              );
-            })}
+            {introWords.map((word, index) => (
+              <motion.span
+                key={index}
+                className="inline-block text-sm sm:text-2xl font-extrabold"
+                style={{ display: "inline-block", whiteSpace: "nowrap" }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+              >
+                {word}
+              </motion.span>
+            ))}
           </motion.p>
         </motion.div>
       </div>
-      <section className="flex flex-col gap-24 services-section">
-        <TextHoverEffect text="Our Services" />
-        <ParallaxScrollSecond
-          payload={Payload}
-          containerRefrence={containerRef} // Passing the containerRef prop
-        />
 
+      <section className="flex flex-col gap-24 services-section">
+        <Suspense fallback={<div>Loading...</div>}>
+          <TextHoverEffect text="Our Services" />
+        </Suspense>
+
+          <ParallaxScrollSecond payload={Payload} containerRefrence={containerRef} />
         <div className="relative z-30">
           <p className="text-amber-50">{servicesContent.closing}</p>
         </div>
@@ -206,7 +188,6 @@ const servicesContent = {
       img: Design,
     },
   ],
-
   closing:
     "At Asrnova, we don’t just write code—we build technology that **drives businesses forward.",
 };

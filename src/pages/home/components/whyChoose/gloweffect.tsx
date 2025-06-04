@@ -3,11 +3,10 @@ import { GlowingEffect } from "./glowing-effect"
 import "./whychoose.css"
 import { Heading } from "@components/heading";
 
-export function GlowingEffectDemo() {
+ function GlowingEffectDemo() {
   return (
     <section className="flex flex-col gap-22 whychoose-section">
       <Heading title="Why Asrnova" />
-
       <div>
           <ul className="grid grid-cols-1 sm:h-[44rem] w-[75%] grid-rows-none !gap-10 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
         <GridItem
@@ -21,7 +20,7 @@ export function GlowingEffectDemo() {
           area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
           icon={<Settings className="h-4 w-4 text-neutral-400" />}
           title="No Boring Projects"
-          description="We avoid cookie-cutter sites that lack soul. If it’s been done a thousand times, it’s not for us. We’re here for work that excites and inspires."
+          description="We avoid cookie-cutter sites that lack soul. If it’s been done a thousand times, it’s not for us. We’re here for work that excites"
          
         />
 
@@ -58,7 +57,7 @@ interface GridItemProps {
   title: string;
   description: React.ReactNode;
 }
-
+export default GlowingEffectDemo
 const GridItem = ({ area, icon, title, description }: GridItemProps) => {
   return (
     <li className={`min-h-[14rem] list-none ${area}`}>

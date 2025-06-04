@@ -9,7 +9,7 @@ type ServicePayload = {
   img: string;
 };
 
-export const ParallaxScrollSecond = ({
+const ParallaxScrollSecond = ({
   payload,
   className,
   containerRefrence,
@@ -204,3 +204,4 @@ export const ParallaxScrollSecond = ({
     </div>
   );
 };
+export default ParallaxScrollSecond

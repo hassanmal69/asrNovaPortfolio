@@ -15,7 +15,7 @@ const Testimonials = () => {
 
         <motion.div initial={{
         }} className=" absolute left-10 sm:left-1/2 z-10 card1 h-[350px] sm:h-[500px] w-[350px] sm:w-[550px] border-2 bg-black border-zinc-800 rounded-4xl flex flex-col items-center">
-          <img src={Dr} className='h-10/11 absolute' loading="lazy"
+          <img src={Dr} alt="asrnova software company worked with mudaris academy" className='h-10/11 absolute' loading="lazy"
             decoding="async" />
           <div className="h-[90%]">
             <div className="flex flex-col h-full justify-end items-start">
