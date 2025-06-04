@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import "./work.css";
 import astronoutImg from "@assets/astranout.webp";
 import pointinAstraunaut from "@assets/pointing.webp";
-import MoonComponent from "./animatedmoon";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Heading } from "@components/heading";
+const MoonComponent = lazy(() => import('./animatedmoon/index'))
 const WorkComponent = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isMobile, setisMobile] = useState(window.innerWidth < 670);
@@ -49,12 +49,12 @@ const WorkComponent = () => {
               }
               alt="Project Image"
               className={`sm:w-1/3 h-[450px] imageinworkContainerAstranout ${isMobile
-                  ? project.img
-                  : hoveredIndex === 0
-                    ? "point-left w-[27%] !h-[380px]"
-                    : hoveredIndex === 2
-                      ? "point-right w-[27%] !h-[380px]"
-                      : ""
+                ? project.img
+                : hoveredIndex === 0
+                  ? "point-left w-[27%] !h-[380px]"
+                  : hoveredIndex === 2
+                    ? "point-right w-[27%] !h-[380px]"
+                    : ""
                 }`}
               animate={{
                 y: [0, -25, 0],
@@ -96,7 +96,9 @@ const WorkComponent = () => {
       </div>
 
       <div className="moonComponent absolute top-1/2 sm:top-auto justify-center w-full h-[20%] sm:h-full flex sm:justify-right">
-        <MoonComponent />
+        <Suspense fallback={<div>loading.....</div>}>
+          <MoonComponent />
+        </Suspense>
       </div>
     </motion.section>
   );

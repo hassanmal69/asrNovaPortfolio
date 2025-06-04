@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion } from "motion/react";
 
-export const TextHoverEffect = ({
+const TextHoverEffect = ({
   text,
   duration,
 }: {
@@ -123,4 +123,5 @@ export const TextHoverEffect = ({
     </svg>
   );
 };
+export default TextHoverEffect
 // marzi-ka-font: this class is written by moiz.
